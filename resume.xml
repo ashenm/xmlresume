@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="resume.xsl"?>
+<!-- https://www.ashenm.ml/resume -->
+<resume>
+
+  <metadata>
+    <name>Ashen M. Gunaratne</name>
+    <address>
+      <street>63/1 St. Mary's Road</street>
+      <city>Mount Lavinia</city>
+      <country isocode="LKA">Sri Lanka</country>
+      <zip>10370</zip>
+    </address>
+    <contact>
+      <mobile>(+94) 77 429 9712</mobile>
+      <email href="mailto:mail@ashenm.ml">mail@ashenm.ml</email>
+    </contact>
+    <sites>
+      <site name="linkedin">www.linkedin.com/ashenm</site>
+      <site name="github">github.com/ashenm</site>
+    </sites>
+  </metadata>
+
+  <section>
+    <title>experience</title>
+    <record>
+      <title>British College of Applied Studies</title>
+      <subtitle>Lecturer</subtitle>
+      <summary>
+        Instructor for <![CDATA[<span class="font-italic">]]>Pearson BTEC HND<![CDATA[</span>]]> in Computing; Responsible for level 5 specialist units: <![CDATA[<span class="font-italic">]]>Computer Systems Architecture<![CDATA[</span>]]>, <![CDATA[<span class="font-italic">]]>Data Structures and Algorithms<![CDATA[</span>]]>, <![CDATA[<span class="font-italic">]]>Discrete Mathematics<![CDATA[</span>]]>, <![CDATA[<span class="font-italic">]]>Network Management<![CDATA[</span>]]>, and <![CDATA[<span class="font-italic">]]>Network Security<![CDATA[</span>]]>.
+      </summary>
+      <duration start="2018-07-01T00:00:00Z" end="" />
+      <location>
+        <city>Colombo</city>
+        <country isocode="LKA">Sri Lanka</country>
+      </location>
+    </record>
+    <record>
+      <title>Exetel PTY Limited</title>
+      <subtitle>Network Engineer</subtitle>
+      <summary>Govern, implement, and troubleshoot real-time traffic steering policies to ensure critical application delivery, value-added services, and user quality of experience driving profitability of key deliverables in the digital data &amp; device space in terms of revenue, users, traffic across 30 Gb/s data link.</summary>
+      <duration start="2016-10-01T00:00:00Z" end="2017-02-01T00:00:00Z" />
+      <location>
+        <city>Sydney</city>
+        <country isocode="AUS">Australia</country>
+      </location>
+    </record>
+    <record>
+      <title>IKON Systems (Private) Limited</title>
+      <subtitle>Chief Information Officer</subtitle>
+      <summary>Direct and manage computing and information technology strategic plans, policies, programs, schedules, and responsible for advertising network’s scalability, security, and capacity-planning.</summary>
+      <duration start="2016-01-01T00:00:00Z" end="2016-10-01T00:00:00Z" />
+      <location>
+        <city>Colombo</city>
+        <country isocode="LKA">Sri Lanka</country>
+      </location>
+    </record>
+  </section>
+
+  <section>
+    <title>education</title>
+    <record>
+      <title>Harvard College</title>
+      <subtitle>Bachelor of Liberal Arts (A.L.B.)</subtitle>
+      <transcript>https://cdn.glitch.com/bddbe95a-e8d0-4ea0-8afc-88c93c2ebd46%2Falb-admission.png</transcript>
+      <summary>Computer Science; GPA 3.9 (as of May 2018)<![CDATA[<br />]]>Related studies in linear algebra, statistics and probability, and finance.</summary>
+      <duration start="2017-06-01T00:00:00Z" end="2021-09-01T00:00:00Z" />
+      <location>
+        <city>Massachusetts</city>
+        <country isocode="USA">United States</country>
+      </location>
+    </record>
+    <record>
+      <title>Stanford University</title>
+      <subtitle>MOOC</subtitle>
+      <transcript>https://verify.lagunita.stanford.edu/SOA/c5ef398d5e164b00afa880709db10af5</transcript>
+      <summary>Studies in enterprise-level web application deployment with focus on security, reliability, scalability, and cross-browser support.</summary>
+      <duration start="2017-10-01T00:00:00Z" end="2017-11-01T00:00:00Z" />
+      <location>
+        <city>California</city>
+        <country isocode="USA">United States</country>
+      </location>
+    </record>
+    <record>
+      <title>Harvard University</title>
+      <subtitle>MOOC</subtitle>
+      <transcript>https://courses.edx.org/certificates/7b4124b616c0475eb451bc7348252c92</transcript>
+      <summary>Studies in computer science for real-world domains of biology, cryptography, finance, forensics, and gaming.</summary>
+      <duration start="2015-01-01T00:00:00Z" end="2015-12-01T00:00:00Z" />
+      <location>
+        <city>Massachusetts</city>
+        <country isocode="USA">United States</country>
+      </location>
+    </record>
+    <record>
+      <title>Université Catholique de Louvain</title>
+      <subtitle>MOOC</subtitle>
+      <transcript>https://courses.edx.org/certificates/7b4124b616c0475eb451bc7348252c92</transcript>
+      <summary>Studies in major programming concepts, techniques, and paradigms in a unified framework.</summary>
+      <duration start="2015-01-01T00:00:00Z" end="2015-11-01T00:00:00Z" />
+      <location>
+        <city>Charleroi</city>
+        <country isocode="BEL">Belgium</country>
+      </location>
+    </record>
+    <record>
+      <title>The University of British Columbia</title>
+      <subtitle>MOOC</subtitle>
+      <transcript>https://courses.edx.org/certificates/e23bace355ab497f9388ac6d0562525e</transcript>
+      <summary>Studies in computation as a tool for systematic problem solving in non-computer-science disciplines.</summary>
+      <duration start="2015-01-01T00:00:00Z" end="2015-10-01T00:00:00Z" />
+      <location>
+        <city>Vancouver</city>
+        <country isocode="CAN">Canada</country>
+      </location>
+    </record>
+    <record>
+      <title>Lakeland Inter-American School</title>
+      <subtitle>Pearson Edexcel AS Level</subtitle>
+      <transcript>https://courses.edx.org/certificates/e23bace355ab497f9388ac6d0562525e</transcript>
+      <articles>
+        <article>
+          <property>Accounting</property>
+          <value>A</value>
+        </article>
+      </articles>
+      <duration start="2014-06-01T00:00:00Z" end="2015-07-01T00:00:00Z" />
+      <location>
+        <city>Colombo</city>
+        <country isocode="LKA">Sri Lanka</country>
+      </location>
+    </record>
+    <record>
+      <title>Lakeland Inter-American School</title>
+      <subtitle>Pearson Edexcel Ordinary Level</subtitle>
+      <transcript>https://cdn.glitch.com/bddbe95a-e8d0-4ea0-8afc-88c93c2ebd46%2Folevel.jpg</transcript>
+      <articles>
+        <article>
+          <property>Mathematics</property>
+          <value>A*</value>
+        </article>
+        <article>
+          <property>Further Pure Mathematics</property>
+          <value>A</value>
+        </article>
+        <article>
+          <property>Accounting</property>
+          <value>A</value>
+        </article>
+        <article>
+          <property>Business Studies</property>
+          <value>B</value>
+        </article>
+        <article>
+          <property>Economics</property>
+          <value>B</value>
+        </article>
+        <article>
+          <property>English Language</property>
+          <value>B</value>
+        </article>
+      </articles>
+      <duration start="2011-03-01T00:00:00Z" end="2014-06-01T00:00:00Z" />
+      <location>
+        <city>Colombo</city>
+        <country isocode="LKA">Sri Lanka</country>
+      </location>
+    </record>
+  </section>
+
+  <section>
+    <title>languages</title>
+    <list>
+      <item>C</item>
+      <item>C++</item>
+      <item>C#</item>
+      <item>CSS</item>
+      <item>DTD</item>
+      <item>HTML</item>
+      <item>Java</item>
+      <item>JavaScript</item>
+      <item>LISP</item>
+      <item>NesC</item>
+      <item>Objective-C</item>
+      <item>Pascal</item>
+      <item>Perl</item>
+      <item>PHP</item>
+      <item>Python</item>
+      <item>SQL</item>
+      <item>SVG</item>
+      <item>VBScript</item>
+      <item>XHTML</item>
+      <item>XML Schema</item>
+      <item>XPath</item>
+      <item>XQuery</item>
+      <item>XSLT</item>
+      <item>English</item>
+      <item>Japanese</item>
+      <item>Sinhala</item>
+    </list>
+  </section>
+
+  <section>
+    <title>academic service</title>
+    <record>
+      <title>freeCodeCamp</title>
+      <subtitle>Curriculum Contributor</subtitle>
+      <summary>Authore guides and specimen solutions for freeCodeCamp certification program challenges on algorithm design.</summary>
+      <duration start="2017-02-01T00:00:00Z" end="" />
+    </record>
+    <record>
+      <title>edX</title>
+      <subtitle>Content Support Associate</subtitle>
+      <summary>Validate and alter qualitative attributes of uploaded course materials to meet edX guidelines.</summary>
+      <duration start="2016-12-01T00:00:00Z" end="" />
+    </record>
+  </section>
+
+  <section>
+    <title>community service</title>
+    <record>
+      <title>United Nations</title>
+      <subtitle>Volunteer Task Force</subtitle>
+      <duration start="2015-01-01T00:00:00Z" end="" />
+    </record>
+  </section>
+
+</resume>

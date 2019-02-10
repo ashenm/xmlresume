@@ -1,0 +1,22 @@
+dist:
+  xenial
+
+language:
+  python
+
+python:
+  3.7.2
+
+install:
+  ./.travis/install.sh
+
+script:
+  ./.travis/build.sh
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+
+after_deploy:
+  ./.travis/propagate.sh

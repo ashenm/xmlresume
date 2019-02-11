@@ -5,6 +5,7 @@ import os
 
 # build cache
 artifacts = [
+  'index.html',
   'resume.pdf',
   'resume.html',
   'standalone.html'

@@ -7,5 +7,5 @@ set -e
 # pdf, standalone, and jekyll template
 make default
 
-# gp-pages index
-cp -f standalone.html index.html
+# gh-pages artifacts
+cp -rfv gh-pages/* .

@@ -1,19 +1,15 @@
 #!/usr/bin/env python3
 # Clean XMLResume Build Artifacts
 
-import os
+from os import P_WAIT, listdir, remove, spawnlp
 
 # build cache
 artifacts = [
-  'index.html',
   'resume.pdf',
   'resume.html',
   'standalone.html'
 ]
 
 # purge build artifacts
-for artifact in artifacts:
-  try:
-    os.remove(artifact)
-  except:
-    pass
+# purge gh-pages artifacts
+spawnlp('rm', 'rm', '--force', '--recursive', *(artifacts + listdir('gh-pages')))

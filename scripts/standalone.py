@@ -4,10 +4,9 @@
 import re
 from frontmatter import parse
 from bs4 import BeautifulSoup
+from reindent import reindent
 
-# spacing
-level = 0
-indent = 2
+# eol
 newline = '\n'
 
 # html doc
@@ -81,55 +80,9 @@ soup += '</head><body>'
 soup += includes.get('body', '')
 soup += '</body></html>'
 
-# BeautifulSoup content
+# prettify content
 soup = BeautifulSoup(markup=soup, features="lxml")
-
-# prettify
-for line in soup.prettify().splitlines():
-
-  # trim whitespace
-  line = line.strip()
-
-  # new lines
-  if not line:
-    output += newline
-    continue
-
-  # starting code blocks
-  if line.endswith('{'):
-    output += ' ' * level * indent + line + newline
-    level += 1
-    continue
-
-  # ending code blocks
-  if line.startswith('}'):
-    level -= 1
-    output += ' ' * level * indent + line + newline
-    continue
-
-  # empty tags
-  if reEmptyTag.match(line):
-    output += ' ' * level * indent + line + newline
-    continue
-
-  # find tags
-  startTag = reStartTag.match(line)
-  endTag = reEndTag.match(line)
-
-  # opening tags
-  if startTag:
-    output += ' ' * level * indent + line + newline
-    level += 1
-    continue
-
-  # closing tags
-  if endTag:
-    level -= 1
-    output += ' ' * level * indent + line + newline
-    continue
-
-  # text content
-  output += ' ' * level * indent + line + newline
+output = reindent(markup=soup.prettify())
 
 # extra space custom tags
 output = re.sub(r'(\s*)<({})>'.format('|'.join(extras)), '{}{}'.format(r'\1<\2>', newline), output)

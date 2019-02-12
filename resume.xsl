@@ -54,8 +54,13 @@
         }
 
         /* add list element seperator */
-        .list-item + .list-item::before {
-          content: ", ";
+        .list-item::after {
+          content: ",";
+        }
+
+        /* reset last list element seperator */
+        .list-item:last-child:after {
+          content: "";
         }
 
         /**

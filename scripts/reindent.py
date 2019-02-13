@@ -31,9 +31,9 @@ def reindent(markup, offset=0, width=2, char=' '):
   punctuations = ( '.', ',', ':', ';' )
 
   # runtime RegExps
-  reEmptyTag = compile(r'<([a-zA-Z][^\s]*).*?/>')
-  reStartTag = compile(r'<([a-zA-Z][^\s]*).*?>')
-  reEndTag = compile(r'</([a-zA-Z][^\s]*).*?>')
+  reEmptyTag = compile(r'<([a-zA-Z]\S*).*?/>')
+  reStartTag = compile(r'<([a-zA-Z]\S*).*?>')
+  reEndTag = compile(r'</([a-zA-Z]\S*).*?>')
 
   # runtime stages for
   # element components

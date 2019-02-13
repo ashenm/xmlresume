@@ -135,7 +135,7 @@
           /* TODO avoid entire section being page breaked */
           /* TODO instead page break .record sub sections */
           .row {
-            break-inside: always;
+            break-inside: avoid;
           }
 
         }

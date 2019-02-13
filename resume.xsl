@@ -131,8 +131,10 @@
             max-width: unset;
           }
 
-          /* shift overflows to next page */
-          .record {
+          /* TEMP shift overflows to next page */
+          /* TODO avoid entire section being page breaked */
+          /* TODO instead page break .record sub sections */
+          .row {
             break-inside: always;
           }
 

@@ -5,6 +5,8 @@ from re import sub
 from lxml import etree
 from bs4 import BeautifulSoup
 from reindent import reindent
+from os.path import join
+from sys import argv
 
 # eol
 newline = '\n'
@@ -15,8 +17,11 @@ sanitized = []
 # extra linefeeded elements
 extras = [ 'script', 'style' ]
 
+# resume theme
+theme = dict(enumerate(argv)).get(1, 'default.xsl')
+
 # translate resume
-xsl = etree.XSLT(etree.parse(source='resume.xsl'))
+xsl = etree.XSLT(etree.parse(source=join('themes', theme)))
 crude = str(xsl(etree.parse(source='resume.xml')))
 
 # prettify html

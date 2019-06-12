@@ -7,7 +7,7 @@ pdf: standalone.html
 standalone.html: resume.html
 	./scripts/standalone.py
 
-resume.html: resume.xsl resume.xml
+resume.html: resume.xml themes/default.xsl
 	./scripts/resume.py
 
 clean:

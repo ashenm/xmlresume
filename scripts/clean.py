@@ -12,4 +12,4 @@ artifacts = [
 
 # purge build artifacts
 # purge gh-pages artifacts
-spawnlp('rm', 'rm', '--force', '--recursive', *(artifacts + listdir('gh-pages')))
+spawnlp('rm', 'rm', '--recursive', '--force', *(artifacts + listdir('gh-pages')))

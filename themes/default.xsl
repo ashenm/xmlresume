@@ -293,8 +293,8 @@
     </address>
     <h6 class="m-0">
       <a>
-        <xsl:attribute name="href">https://<xsl:value-of select="sites/site[@name='linkedin']" /></xsl:attribute>
-        <xsl:value-of select="sites/site[@name='linkedin']" />
+        <xsl:attribute name="href">https://<xsl:value-of select="sites/site[@name='LinkedIn']" /></xsl:attribute>
+        <xsl:value-of select="sites/site[@name='LinkedIn']" />
       </a>
     </h6>
     <h6 class="m-0"><xsl:value-of select="contact/mobile" /></h6>

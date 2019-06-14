@@ -8,7 +8,7 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 output = PdfFileWriter()
 
 # render intermediate PDF
-spawnlp(P_WAIT, 'google-chrome', 'google-chrome', '--headless', '--print-to-pdf=/tmp/resume.pdf', 'file:///{}'.format(path.abspath('standalone.html')))
+spawnlp(P_WAIT, 'google-chrome', 'google-chrome', '--headless', '--no-sandbox', '--print-to-pdf=/tmp/resume.pdf', 'file:///{}'.format(path.abspath('standalone.html')))
 
 # construct denouement
 with open('/tmp/resume.pdf', 'rb') as file:

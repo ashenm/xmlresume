@@ -29,6 +29,7 @@
           width: 210mm;
           min-height: 297mm;
           background-color: #FFF;
+          transform-origin: top left;
           font-family: sans-serif;
           display: flex;
         }

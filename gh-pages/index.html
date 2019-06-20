@@ -1,126 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="A XML based standard for resumes" />
-  <meta name="keywords" content="curriculum vitae, cv, resume, standard, template, xml" />
   <meta name="author" content="Ashen Gunaratne" />
 
-  <title>XMLResume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
 
-  <style>
+  <script>
 
-    body {
-      min-height: 100vh;
-      background-color: #222;
-    }
+    document.addEventListener('DOMContentLoaded', function (e) {
 
-    a {
-      text-decoration: none;
-    }
+      document.preview = document.getElementById('preview');
 
-    ul {
-      list-style: none;
-    }
+      document.getElementById('theme').addEventListener('change', function (e) {
+        document.preview.src = document.preview.src.replace(/(.*)\/(.*)/, this.value + '/$2');
+      });
 
-    .align-items-center {
-      align-items: center;
-    }
+      document.getElementById('format').addEventListener('change', function (e) {
+        document.preview.type = this.value === 'html' ? 'text/html' : 'application/pdf';
+        document.preview.src = document.preview.src.replace(/(:?pdf|html)(:?.*)$/, this.value + (this.value === 'pdf' ? '#view=Fit&toolbar=0&navpanes=0&scrollbar=0' : ''));
+      });
 
-    .d-flex {
-      display: flex;
-    }
+    });
 
-    .d-none {
-      display: none;
-    }
-
-    .fade:hover {
-      opacity: 0.5;
-    }
-
-    .justify-content-evenly {
-      justify-content: space-evenly;
-    }
-
-    .mb-0 {
-      margin-bottom: 0px;
-    }
-
-    .mt-0 {
-      margin-top: 0px;
-    }
-
-    .p-0 {
-      padding: 0px;
-    }
-
-    .pointer {
-      cursor: pointer;
-    }
-
-    .status {
-      zoom: 75%;
-      right: 2%;
-      bottom: 1%;
-      position: absolute;
-    }
-
-    .w-100 {
-      width: 100%;
-    }
-
-    @media (min-width: 576px) {
-      .status {
-        zoom: inherit;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      main {
-        margin: auto;
-        max-width: 75vw;
-      }
-    }
-
-  </style>
+  </script>
 
 </head>
-<body class="d-flex align-items-center mb-0 mt-0">
-  <header class="d-none">
-    <h1>XMLResume</h1>
-    <h2>A XML based standard for resumes</h2>
-  </header>
-  <main class="w-100">
-    <nav>
-      <ul class="d-flex justify-content-evenly p-0">
-        <li class="pointer fade">
-          <a href="standalone">
-            <img src="img/icon-html.png" alt="view html" />
-          </a>
-        </li>
-        <li class="pointer fade">
-          <a href="resume.pdf">
-            <img src="img/icon-pdf.png" alt="view pdf" />
-          </a>
-        </li>
-      </ul>
+<body class="d-flex flex-column overflow-hidden overflow-hidden vh-100 vw-100 ">
+  <header>
+    <nav class="navbar navbar-dark bg-dark justify-content-center justify-content-md-end">
+      <div class="form-row">
+        <div class="col">
+          <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="theme">theme</label>
+            </div>
+            <select id="theme" class="custom-select">
+              <option selected="selected">default</option>
+              <option>linkedin</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="format">format</label>
+            </div>
+            <select id="format" class="custom-select">
+              <option selected="selected">html</option>
+              <option>pdf</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </nav>
+  </header>
+  <main class="flex-grow-1">
+    <embed id="preview" class="h-100 w-100" src="default/resume.html" type="text/html" />
   </main>
   <footer>
-    <div class="status">
-      <a href="https://travis-ci.org/ashenm/xmlresume">
-        <img src="https://travis-ci.org/ashenm/xmlresume.svg?branch=master" alt="build status" />
-      </a>
-      <a href="https://github.com/ashenm/xmlresume/tree/gh-pages">
-        <img src="https://img.shields.io/badge/version-latest-green.svg" alt="build version" />
-      </a>
-      <a href="https://github.com/ashenm/xmlresume">
-        <img src="https://img.shields.io/badge/source-latest-blue.svg" alt="source code" />
-      </a>
-    </div>
   </footer>
 </body>
 </html>

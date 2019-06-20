@@ -25,3 +25,6 @@ do
   mv --force "resume.html" "resume.pdf" "gh-pages/$(basename $file .xsl)/"
 
 done
+
+# webroot default theme artifacts
+cp --force gh-pages/default/resume.html gh-pages/default/resume.pdf gh-pages/

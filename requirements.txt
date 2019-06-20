@@ -1,4 +1,3 @@
 bs4
 lxml
 PyPDF2
-python-frontmatter

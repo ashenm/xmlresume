@@ -1,13 +1,10 @@
 default:
 	$(MAKE) pdf
 
-pdf: standalone.html
+pdf: resume.html
 	./scripts/pdf.py
 
-standalone.html: resume.html
-	./scripts/standalone.py
-
-resume.html: resume.xml themes/default.xsl
+resume.html: resume.xml resume.xsl themes/default.xsl
 	./scripts/resume.py
 
 clean:

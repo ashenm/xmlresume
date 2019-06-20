@@ -6,8 +6,7 @@ from os import P_WAIT, listdir, remove, spawnlp
 # build cache
 artifacts = [
   'resume.pdf',
-  'resume.html',
-  'standalone.html'
+  'resume.html'
 ]
 
 # purge build artifacts

@@ -69,13 +69,19 @@ def reindent(markup, offset=0, width=2, char=' '):
       sanitized.append(fill * level * indent + stage)
       continue
 
-    # handle jekyll template tags
-    if stage.startswith('{'):
-      sanitized.append(newline + stage)
+    # handle empty tags
+    tagMatch = reEmptyTag.match(stage)
+
+    if tagMatch and header:
+
+      sanitized.append(newline + fill * level * indent + header)
+      header = ''
+      level += 1
+
+      sanitized.append(newline + fill * level * indent + stage)
       continue
 
-    # handle empty tags
-    if reEmptyTag.match(stage):
+    if tagMatch:
       sanitized.append(newline + fill * level * indent + stage)
       continue
 

@@ -94,7 +94,7 @@
     }
 
     #resume > .section > .titles {
-      flex: 0 0 30mm;
+      flex: 0 0 35mm;
     }
 
     #resume > .section > .titles > .title {

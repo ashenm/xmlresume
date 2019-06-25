@@ -111,7 +111,6 @@
 
     /* mobile number */
     #sidebar > .section:first-child > .contact:nth-child(2) {
-      cursor: initial;
       margin: 5mm 0 1mm 0;
     }
 
@@ -326,16 +325,16 @@
     <div class="section">
       <h2 class="title">contact</h2>
       <a class="contact">
-        <xsl:attribute name="href">javascript:void(0)</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="contact/mobile/@href" /></xsl:attribute>
         <h3 class="record"><xsl:value-of select="contact/mobile" /></h3>
       </a>
       <a class="contact">
-        <xsl:attribute name="href">mailto:<xsl:value-of select="contact/email" /></xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="contact/email/@href" /></xsl:attribute>
         <h3 class="record"><xsl:value-of select="contact/email" /></h3>
       </a>
       <xsl:for-each select="sites/site">
         <a class="site">
-          <xsl:attribute name="href">https://<xsl:value-of select="." /></xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="@href" /></xsl:attribute>
           <h3 class="record"><xsl:value-of select="." /><span>(<xsl:value-of select="@name" />)</span></h3>
         </a>
       </xsl:for-each>

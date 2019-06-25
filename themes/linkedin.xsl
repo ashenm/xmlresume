@@ -59,7 +59,7 @@
     }
 
     #sidebar {
-      color: #E1E1E1E1;
+      color: #E1E1E1;
       background-color: #293E49;
       flex: 0 0 22.5%;
     }

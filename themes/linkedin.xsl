@@ -209,6 +209,12 @@
       margin: 0 0 1mm 0;
     }
 
+    @font-face {
+      font-family: 'sans-serif';
+      font-style: normal;
+      src: url(fonts/refsan.ttf) format('truetype'), url(https://ashenm.github.io/xmlresume/fonts/refsan.ttf) format('truetype'), local('sans-serif');
+    }
+
     @media print {
 
       /* fill resume edge-to-edge  */

@@ -164,6 +164,12 @@
       text-transform: capitalize;
     }
 
+    @font-face {
+      font-style: normal;
+      font-family: 'Garamond';
+      src: url(fonts/garamond.ttf) format('truetype'), url(https://ashenm.github.io/xmlresume/fonts/garamond.ttf) format('truetype'), local('Garamond');
+    }
+
     @media print {
 
       /* fill resume edge-to-edge  */
@@ -175,7 +181,7 @@
 
       /* remove hyperlink styles */
       #resume a { color: inherit; }
-    
+
     }
 
     @page {

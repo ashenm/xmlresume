@@ -279,7 +279,12 @@
     <div class="section sites">
       <h2 class="title">sites</h2>
       <xsl:for-each select="sites/site">
-        <h3 class="record"><xsl:value-of select="." /></h3>
+        <h3 class="record">
+          <a>
+            <xsl:attribute name="href"><xsl:value-of select="@href" /></xsl:attribute>
+            <xsl:value-of select="." />
+          </a>
+        </h3>
       </xsl:for-each>
     </div>
     <div class="section contact">

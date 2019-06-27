@@ -3,15 +3,20 @@
 
 from os import P_WAIT, path, remove, spawnlp
 from PyPDF2 import PdfFileReader, PdfFileWriter
+from tempfile import NamedTemporaryFile
 
 # denouement
 output = PdfFileWriter()
 
+# intermediate PDF
+intermediate = NamedTemporaryFile(mode='wb')
+
 # render intermediate PDF
-spawnlp(P_WAIT, 'google-chrome', 'google-chrome', '--headless', '--no-sandbox', '--print-to-pdf=/tmp/resume.pdf', 'file:///{}'.format(path.abspath('resume.html')))
+spawnlp(P_WAIT, 'google-chrome', 'google-chrome', '--headless', '--no-sandbox',
+  '--print-to-pdf={}'.format(intermediate.name), 'file:///{}'.format(path.abspath('resume.html')))
 
 # construct denouement
-with open('/tmp/resume.pdf', 'rb') as file:
+with open(intermediate.name, 'rb') as file:
 
   # append pages
   output.appendPagesFromReader(PdfFileReader(file))
@@ -29,4 +34,4 @@ with open('/tmp/resume.pdf', 'rb') as file:
     output.write(file)
 
 # delete intermediate PDF
-remove('/tmp/resume.pdf')
+intermediate.close();

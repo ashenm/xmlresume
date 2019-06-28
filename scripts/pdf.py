@@ -16,7 +16,7 @@ from reportlab.lib.units import mm
 parser = ArgumentParser()
 parser.add_argument('--page-numbers', action='store_true', help='Display page numbers on top-right corner')
 parser.add_argument('--font', metavar='FONT', help='Specify display font for header and footer (default: \'Helvetica\')')
-parser.add_argument('--font-size', default=1, type=int, metavar='SIZE', help='Specify display font size for header and footer (default: \'1mm\')')
+parser.add_argument('--font-size', default=1, type=float, metavar='SIZE', help='Specify display font size for header and footer (default: \'1mm\')')
 args = parser.parse_args()
 
 # denouement

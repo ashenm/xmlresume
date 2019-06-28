@@ -13,4 +13,4 @@ artifacts = [
 
 # purge build artifacts
 # purge gh-pages artifacts
-spawnlp(P_WAIT, 'rm', 'rm', '--recursive', '--force', *artifacts, *('{}/{}'.format('gh-pages', theme.replace('.xsl', '')) for theme in listdir('themes')))
+spawnlp(P_WAIT, 'git', 'git', 'clean', '-fdq', 'gh-pages')

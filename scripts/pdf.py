@@ -27,8 +27,7 @@ intermediate = NamedTemporaryFile(mode='wb')
 forefront = NamedTemporaryFile(mode='wb')
 
 # render intermediate PDF
-spawnlp(P_WAIT, 'google-chrome', 'google-chrome', '--headless', '--no-sandbox',
-  '--print-to-pdf={}'.format(intermediate.name), 'file:///{}'.format(path.abspath('resume.html')))
+spawnlp(P_WAIT, 'node', 'node', 'scripts/pdf.js', '--output={}'.format(intermediate.name), '--source=file:///{}'.format(path.abspath('resume.html')))
 
 # construct denouement
 with open(intermediate.name, 'rb') as resume, open(forefront.name, 'rb') as forepart:

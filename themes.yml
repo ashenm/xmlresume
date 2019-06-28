@@ -1,0 +1,9 @@
+default:
+  font: 'garamond'
+  page_numbers: true
+  font_size: 4
+
+linkedin:
+  font: 'refsan'
+  page_numbers: false
+  font_size: 3.75

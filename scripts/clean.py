@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Clean XMLResume Build Artifacts
 
-from os import P_WAIT, listdir, spawnlp
+from os import P_WAIT, spawnlp
 
 # build cache
 artifacts = [
@@ -14,3 +14,4 @@ artifacts = [
 # purge build artifacts
 # purge gh-pages artifacts
 spawnlp(P_WAIT, 'git', 'git', 'clean', '-fdq', 'gh-pages')
+spawnlp(P_WAIT, 'rm', 'rm', '-rf', *artifacts)

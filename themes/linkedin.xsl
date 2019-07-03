@@ -339,10 +339,10 @@
         </a>
       </xsl:for-each>
     </div>
-    <xsl:if test="boolean(../section/title = 'research interests')">
+    <xsl:if test="boolean(parent::resume/section[title='research interests'])">
       <div class="section">
         <h2 class="title">research interests</h2>
-        <xsl:for-each select="../section[title='research interests']/list/item">
+        <xsl:for-each select="parent::resume/section[title='research interests']/list/item">
           <h3 class="record"><xsl:value-of select="." /></h3>
         </xsl:for-each>
       </div>
@@ -382,10 +382,10 @@
   </xsl:template>
 
   <xsl:template match="/resume/section/record/subtitle">
-    <xsl:if test="not(../transcript)">
+    <xsl:if test="not(parent::record/transcript)">
       <xsl:value-of select="." />
     </xsl:if>
-    <xsl:if test="boolean(../transcript)">
+    <xsl:if test="boolean(parent::record/transcript)">
       <a class="transcript">
         <xsl:attribute name="href"><xsl:value-of select="../transcript" /></xsl:attribute>
         <xsl:value-of select="." />

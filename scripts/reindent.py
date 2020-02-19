@@ -56,7 +56,7 @@ def reindent(markup, offset=0, width=2, char=' '):
       continue
 
     # handle starting and ending code blocks
-    if stage.endswith('{') and stage.startswith('}'):
+    if stage.endswith(('{', '[')) and stage.startswith(('}', ']')):
       level -= 1
       sanitized.append(newline)
       sanitized.append(fill * level * indent + stage)
@@ -64,14 +64,14 @@ def reindent(markup, offset=0, width=2, char=' '):
       continue
 
     # handle starting code blocks
-    if stage.endswith('{'):
+    if stage.endswith(('{', '[')):
       sanitized.append(newline)
       sanitized.append(fill * level * indent + stage)
       level += 1
       continue
 
     # handle ending code blocks
-    if stage.startswith('}'):
+    if stage.startswith(('}', ']')):
       level -= 1
       sanitized.append(newline)
       sanitized.append(fill * level * indent + stage)

@@ -182,6 +182,22 @@
   </section>
 
   <section>
+    <title>honors and awards</title>
+    <record>
+      <title>HackerRank</title>
+      <subtitle>Gold Honours - Problem Solving</subtitle>
+      <transcript>https://www.hackerrank.com/ashenm</transcript>
+      <summary>Gold honours, five-star proficiency rating, in the domains of algorithms and data structures.</summary>
+    </record>
+    <record>
+      <title>HackerRank</title>
+      <subtitle>Gold Honours - Python</subtitle>
+      <transcript>https://www.hackerrank.com/ashenm</transcript>
+      <summary>Gold honours, five-star proficiency rating, in the domain of python subsuming all language-supported paradigms.</summary>
+    </record>
+  </section>
+
+  <section>
     <title>languages</title>
     <list>
       <item>C</item>

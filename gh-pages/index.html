@@ -9,10 +9,52 @@
 
   <title>XMLResume</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
-
   <style>
-    .custom-select { width: max-content; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    main {
+      flex-grow: 1;
+    }
+
+    nav {
+      background: #343A40;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    label {
+      background: #E9ECEF;
+      border-radius: 0.2rem;
+      display: inline-block;
+      padding: 0.375rem 0.75rem;
+      margin: 0 0.125rem;
+    }
+
+    label > select {
+      background: transparent;
+      border: 0;
+    }
+
+    embed {
+      height: 100%;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      nav { text-align: right; }
+    }
+
   </style>
 
   <script>
@@ -21,51 +63,49 @@
 
       document.preview = document.getElementById('preview');
 
-      document.getElementById('theme').addEventListener('change', function (e) {
-        document.preview.src = document.preview.src.replace(/(.*)\/(.*)/, this.value + '/$2');
-      });
+      document.querySelector('nav').addEventListener('change', function (e) {
 
-      document.getElementById('format').addEventListener('change', function (e) {
-        document.preview.type = this.value === 'html' ? 'text/html' : 'application/pdf';
-        document.preview.src = document.preview.src.replace(/(:?pdf|html)(:?.*)$/, this.value + (this.value === 'pdf' ? '#view=Fit&toolbar=0&navpanes=0&scrollbar=0' : ''));
-      });
+        if (e.target.dataset.select === 'theme') {
+          document.preview.src = document.preview.src.replace(/(.*)\/(.+)\/(.+)$/, '$1/'.concat(e.target.value, '/$3'));
+          return true;
 
-    });
+        }
+
+        if (e.target.dataset.select === 'format') {
+          document.preview.src = document.preview.src.replace(/(.+)\.(.+)$/, '$1'.concat('.', e.target.value, '#view=Fit&toolbar=0&navpanes=0&scrollbar=0'));
+          document.preview.type = e.target.options[e.target.selectedIndex].dataset.mime;
+        }
+
+        return false;
+
+      }, { passive: true });
+
+    }, { passive: true });
 
   </script>
 
 </head>
-<body class="d-flex flex-column overflow-hidden overflow-hidden vh-100 vw-100 ">
+<body>
   <header>
-    <nav class="navbar navbar-dark bg-dark justify-content-center justify-content-md-end">
-      <div class="form-row">
-        <div class="col">
-          <div class="input-group input-group-sm">
-            <div class="input-group-prepend">
-              <label class="input-group-text" for="theme">theme</label>
-            </div>
-            <select id="theme" class="custom-select">
-              <option selected="selected">default</option>
-              <option>linkedin</option>
-            </select>
-          </div>
-        </div>
-        <div class="col">
-          <div class="input-group input-group-sm">
-            <div class="input-group-prepend">
-              <label class="input-group-text" for="format">format</label>
-            </div>
-            <select id="format" class="custom-select">
-              <option selected="selected">html</option>
-              <option>pdf</option>
-            </select>
-          </div>
-        </div>
-      </div>
+    <nav>
+      <label>
+        theme
+        <select data-select="theme">
+          <option>default</option>
+          <option>linkedin</option>
+        </select>
+      </label>
+      <label>
+        format
+        <select data-select="format">
+          <option data-mime="text/html">html</option>
+          <option data-mime="application/pdf">pdf</option>
+        </select>
+      </label>
     </nav>
   </header>
-  <main class="flex-grow-1">
-    <embed id="preview" class="h-100 w-100" src="default/resume.html" type="text/html" />
+  <main>
+    <embed id="preview" src="default/resume.html" type="text/html" />
   </main>
   <footer>
   </footer>

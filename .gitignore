@@ -6,3 +6,7 @@ __pycache__/
 # Python installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+
+# Node dependency directories
+node_modules/
+jspm_packages/

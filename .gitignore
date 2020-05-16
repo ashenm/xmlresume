@@ -1,1 +1,8 @@
-__pycache__
+# Python byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python installer logs
+pip-log.txt
+pip-delete-this-directory.txt

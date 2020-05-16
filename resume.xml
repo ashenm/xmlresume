@@ -182,6 +182,22 @@
   </section>
 
   <section>
+    <title>projects</title>
+    <record>
+      <title>Thin Client Infrastructure for Lab Environment</title>
+      <summary>Designed and soft-launched a tier-two compliant laboratory infrastructure comprising a total capacity of ~ten-hundred diskless nodes with a LWAPP powered wireless access network.</summary>
+    </record>
+    <record>
+      <title>Distributed Management Implementation</title>
+      <summary>Drafted a RPC-based policy synchronisation discharge for the multipoint bandwidth management system subsuming an aggregated link amplitude of 30 Gb/s.</summary>
+    </record>
+    <record>
+      <title>On-Premises to Cloud Migration</title>
+      <summary>Designed and overviewed the migration of an on-premises infrastructure for collection of massive datasets capable of 500M HTTP hits per day with peaks of 10K per second.</summary>
+    </record>
+  </section>
+
+  <section>
     <title>honors and awards</title>
     <record>
       <title>HackerRank</title>

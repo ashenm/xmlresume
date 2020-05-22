@@ -269,19 +269,6 @@
 
   <xsl:template match="/resume/metadata">
     <h1 class="title"><xsl:value-of select="name" /></h1>
-    <address class="section">
-      <p class="address">
-        <xsl:value-of select="address/street" />,
-        <span class="city"><xsl:value-of select="address/city" /></span>,
-        <xsl:value-of select="address/zip" />
-        <span>
-          <xsl:attribute name="data-isocode">
-            <xsl:value-of select="address/country/@isocode" />
-          </xsl:attribute>
-          <xsl:value-of select="address/country" />
-        </span>
-      </p>
-    </address>
     <div class="section sites">
       <h2 class="title">sites</h2>
       <xsl:for-each select="sites/site">

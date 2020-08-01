@@ -11,4 +11,4 @@ curl -fsS \
   --header "Accept: application/json" \
   --header "Content-Type: application/json" \
   --header "Authorization: token ${TRAVIS_API_TOKEN}" \
-  --data "{ \"request\": { \"branch\": \"master\", \"message\": \"Build to parity with commit "${TRAVIS_COMMIT}" on "${TRAVIS_REPO_SLUG}"\" } }" "https://api.travis-ci.org/repo/ashenm%2Fhomepage/requests"
+  --data "{ \"request\": { \"branch\": \"master\", \"message\": \"Build to parity with commit "${TRAVIS_COMMIT}" on "${TRAVIS_REPO_SLUG}"\" } }" "https://api.travis-ci.com/repo/ashenm%2Fhomepage/requests"

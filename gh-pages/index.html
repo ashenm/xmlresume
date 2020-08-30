@@ -65,6 +65,8 @@
 
       document.querySelector('nav').addEventListener('change', function (e) {
 
+        // https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf
+
         if (e.target.dataset.select === 'theme') {
           document.preview.src = document.preview.src.replace(/(.*)\/(.+)\/(.+)$/, '$1/'.concat(e.target.value, '/$3'));
           return true;

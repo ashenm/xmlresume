@@ -65,6 +65,7 @@ with open(intermediate.name, 'rb') as resume, open(forefront.name, 'rb') as fore
     output.addPage(intermediate.pdf.getPage(i))
 
   # add metadata
+  # https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdfmark_reference.pdf
   output.addMetadata({
     '/Subject': 'Curriculum Vitae',
     '/Creator': 'XMLResume (https://github.com/ashenm/xmlresume)',

@@ -166,7 +166,7 @@
     }
 
     #premier > .section > .record {
-      padding-top: 3.5mm;
+      padding: 1.75mm 0;
       break-inside: avoid;
     }
 

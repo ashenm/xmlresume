@@ -72,6 +72,9 @@ with open(intermediate.name, 'rb') as resume, open(forefront.name, 'rb') as fore
     '/Author': 'Ashen Gunaratne'
   })
 
+  # configure initial view
+  output.setPageLayout('/SinglePage')
+
   # write output
   with open('resume.pdf', 'wb') as file:
     output.write(file)

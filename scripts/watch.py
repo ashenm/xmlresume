@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
+#
+# XMLResume
+# https://github.com/ashenm/xmlresume
 # Watch changes and rebuild artifacts
+#
+# Ashen Gunaratne
+# mail@ashenm.ml
+#
 
 from time import sleep
 from os import P_WAIT, stat, spawnlp
@@ -47,3 +54,5 @@ if __name__ == '__main__':
 
   # monitor file
   monitor(join('themes', theme), 1, cmd)
+
+# vim: set expandtab shiftwidth=2:

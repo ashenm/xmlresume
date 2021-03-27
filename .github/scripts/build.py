@@ -41,3 +41,5 @@ for theme in themes:
   # move artifacts
   replace(src='resume.html', dst=join('gh-pages', theme, 'resume.html'))
   replace(src='resume.pdf', dst=join('gh-pages', theme, 'resume.pdf'))
+
+# vim: set expandtab shiftwidth=2:

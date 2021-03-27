@@ -1,0 +1,66 @@
+name: GitHub Pages
+
+on:
+  - push
+  - pull_request
+  - workflow_dispatch
+
+jobs:
+  build:
+    if: |
+      !startsWith(github.event.head_commit.message, '[Skip CI]')
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - run: make install
+      - run: make gh-pages/tarball
+      - uses: actions/upload-artifact@v2
+        with:
+          name: artifacts.tar.bz2
+          path: artifacts.tar.bz2
+    runs-on: ubuntu-latest
+  deploy:
+    needs:
+      - build
+    if: |
+      github.ref == 'refs/heads/master' &&
+      github.event_name != 'pull_request' &&
+      !startsWith(github.event.head_commit.message, '[Skip Deploy]')
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: artifacts.tar.bz2
+      - run: tar --extract --bzip2 --verbose --file=artifacts.tar.bz2
+      - run: |
+          mkdir --parent /tmp/deploy
+          rsync --delete --links --recursive --verbose gh-pages/ /tmp/deploy
+      - run: |
+          git init
+          git checkout --orphan gh-pages
+          git config user.email "mail@ashenm.ml"
+          git config user.name "Ashen Gunaratne"
+          git add --all .
+          git commit --quiet --message "Deploy ashenm/xmlresume to github.com/${GITHUB_REPOSITORY}.git:gh-pages"
+          git push --force --quiet "https://${{ secrets.OCTOCAT_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" "gh-pages:gh-pages"
+          git show --stat-count=10 HEAD
+        working-directory: /tmp/deploy
+    runs-on: ubuntu-latest
+  culminate:
+    needs:
+      - deploy
+    steps:
+      - run: |
+          # ashenm/homepage
+          curl --fail --request POST --header "Accept: application/vnd.github.v3+json" --header "Authorization: token ${OCTOCAT_TOKEN}" --data "{ \"ref\": \"master\" }" --url "https://api.github.com/repos/ashenm/homepage/actions/workflows/build-deploy.yml/dispatches"
+        env:
+          OCTOCAT_TOKEN: ${{ secrets.OCTOCAT_TOKEN }}
+    runs-on: ubuntu-latest
+
+# vim: set expandtab shiftwidth=2:

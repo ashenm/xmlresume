@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-# Generate Resume PDF
+#
+# XMLResume
+# https://github.com/ashenm/xmlresume
+# Generate resume PDF
+#
+# Ashen Gunaratne
+# mail@ashenm.ml
+#
 
 from os import P_WAIT, path, remove, spawnlp
 from os.path import basename
@@ -83,3 +90,5 @@ with open(intermediate.name, 'rb') as resume, open(forefront.name, 'rb') as fore
 # delete intermediate docs
 intermediate.close();
 forefront.close();
+
+# vim: set expandtab shiftwidth=2:

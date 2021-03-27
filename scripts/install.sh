@@ -1,5 +1,12 @@
 #!/usr/bin/env sh
-# Install XMLResume Build Dependencies
+#
+# XMLResume
+# https://github.com/ashenm/xmlresume
+# Install XMLResume build dependencies
+#
+# Ashen Gunaratne
+# mail@ashenm.ml
+#
 
 set -e
 
@@ -53,3 +60,5 @@ pip3 install --requirement requirements.txt
 
 # node libraries
 npm install puppeteer yargs
+
+# vim: set expandtab shiftwidth=2:

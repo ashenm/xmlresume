@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
+#
+# XMLResume
+# https://github.com/ashenm/xmlresume
 # Reindent BeautifulSoup prettified HTML
+#
+# Ashen Gunaratne
+# mail@ashenm.ml
+#
 
 # built-in `compile` not being used
 # hence following overwrite is harmless
@@ -183,3 +190,5 @@ def reindent(markup, offset=0, width=2, char=' '):
 
   # stringify output
   return ''.join(sanitized)
+
+# vim: set expandtab shiftwidth=2:

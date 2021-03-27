@@ -1,4 +1,13 @@
 #!/usr/bin/env node
+/**
+ * XMLResume
+ * https://github.com/ashenm/xmlresume
+ * Generate intermediate resume PDF
+ *
+ * Ashen Gunaratne
+ * mail@ashenm.ml
+ *
+ */
 
 const path = require('path');
 const puppeteer = require('puppeteer');
@@ -26,3 +35,5 @@ puppeteer.launch({ args: [ '--no-sandbox' ] }).then(async browser => {
   await browser.close();
 
 });
+
+/* vim: set expandtab shiftwidth=2: */

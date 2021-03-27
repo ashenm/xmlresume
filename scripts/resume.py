@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-# Generate and Prettify resume.html
+#
+# XMLResume
+# https://github.com/ashenm/xmlresume
+# Generate and prettify resume.html
+#
+# Ashen Gunaratne
+# mail@ashenm.ml
+#
 
 from lxml import etree
 from bs4 import BeautifulSoup
@@ -20,3 +27,5 @@ soup = BeautifulSoup(markup=document, features='lxml')
 # write prettified output
 with open(file='resume.html', mode='w', encoding='utf_8') as file:
   file.write(reindent(markup=soup.prettify(encoding=None, formatter='html')))
+
+# vim: set expandtab shiftwidth=2:

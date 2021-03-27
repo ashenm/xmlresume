@@ -46,7 +46,7 @@ jobs:
           git checkout --orphan gh-pages
           git config user.email "mail@ashenm.ml"
           git config user.name "Ashen Gunaratne"
-          git add --all .
+          git add --all --force .
           git commit --quiet --message "Deploy ashenm/xmlresume to github.com/${GITHUB_REPOSITORY}.git:gh-pages"
           git push --force --quiet "https://${{ secrets.OCTOCAT_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" "gh-pages:gh-pages"
           git show --stat-count=10 HEAD

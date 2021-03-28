@@ -52,11 +52,9 @@ with open(intermediate.name, 'rb') as resume, open(forefront.name, 'rb') as fore
     pdfmetrics.registerFont(TTFont('{}'.format(basename(args.font)), '{}.ttf'.format(args.font)))
     forefront.canvas.setFont('{}'.format(basename(args.font)), forefront.canvas._fontsize)
 
-  # header and footer styles
-  forefront.canvas.setFontSize(args.font_size * mm)
-
   # construct page headers and footers
   for i in range(2, forefront.pages + 1):
+    forefront.canvas.setFont(basename(args.font) if args.font else forefront.canvas._fontname, args.font_size * mm)
     forefront.canvas.drawRightString(200 * mm, 287 * mm, '{}'.format(f'Ashen Gunaratne {i}/{forefront.pages}' if args.page_numbers else ''))
     forefront.canvas.showPage()
 

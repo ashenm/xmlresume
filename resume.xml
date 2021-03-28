@@ -25,6 +25,18 @@
   <section>
     <title>experience</title>
     <record>
+      <title>Railsbank</title>
+      <subtitle>Engineer</subtitle>
+      <summary>
+        BaaS integrations engineer; Design, author, and review regulated provider infrastructure integrations conforming to compliance and security statutes.
+      </summary>
+      <duration start="2020-12-28T00:00:00Z" end="" />
+      <location>
+        <city>London</city>
+        <country isocode="GBR">United Kingdom</country>
+      </location>
+    </record>
+    <record>
       <title>Al Iman Schools</title>
       <subtitle>Educator</subtitle>
       <summary>

@@ -25,6 +25,18 @@
   <section>
     <title>experience</title>
     <record>
+      <title>Al Iman Schools</title>
+      <subtitle>Educator</subtitle>
+      <summary>
+        Educator for computer science; Responsible for designing, implementing, and delivering custom tailored curriculums for key stages three, four, and five with emphasis on art of programming and integrating computer science in the domain of other subjects.
+      </summary>
+      <duration start="2020-10-01T00:00:00Z" end="2020-12-31T00:00:00Z" />
+      <location>
+        <city>Colombo</city>
+        <country isocode="LKA">Sri Lanka</country>
+      </location>
+    </record>
+    <record>
       <title>British College of Applied Studies</title>
       <subtitle>Lecturer</subtitle>
       <summary>

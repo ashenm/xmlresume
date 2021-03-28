@@ -58,7 +58,7 @@ jobs:
     steps:
       - run: |
           # ashenm/homepage
-          curl --fail --request POST --header "Accept: application/vnd.github.v3+json" --header "Authorization: token ${OCTOCAT_TOKEN}" --data "{ \"ref\": \"master\" }" --url "https://api.github.com/repos/ashenm/homepage/actions/workflows/build-deploy.yml/dispatches"
+          curl --fail --request POST --header "Accept: application/vnd.github.v3+json" --header "Authorization: token ${OCTOCAT_TOKEN}" --data "{ \"ref\": \"master\" }" --url "https://api.github.com/repos/ashenm/homepage/actions/workflows/pages.yml/dispatches"
         env:
           OCTOCAT_TOKEN: ${{ secrets.OCTOCAT_TOKEN }}
     runs-on: ubuntu-latest

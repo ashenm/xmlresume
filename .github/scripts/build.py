@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-from yaml import load
+from yaml import Loader, load
 from os import P_WAIT, makedirs, replace, spawnl, spawnv
 from os.path import join
 
 # parse theme formations
 with open('themes.yml', 'rt') as stream:
-  themes = load(stream=stream)
+  themes = load(stream=stream, Loader=Loader)
 
 # build all theme formations
 for theme in themes:

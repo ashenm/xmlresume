@@ -25,6 +25,28 @@
   <section>
     <title>experience</title>
     <record>
+      <title>Singlife</title>
+      <subtitle>Technial Lead</subtitle>
+      <summary></summary>
+      <duration start="2022-04-04T00:00:00Z" end="" />
+      <location>
+        <city>Singapore</city>
+        <country isocode="SGP">Singapore</country>
+      </location>
+    </record>
+    <record>
+      <title>Railsbank</title>
+      <subtitle>Assosiate Technial Lead</subtitle>
+      <summary>
+        BaaS integrations team lead; Plan, design, and oversea regulated provider infrastructure integrations conforming to compliance and security statutes.
+      </summary>
+      <duration start="2021-12-28T00:00:00Z" end="2022-03-28T00:00:00Z" />
+      <location>
+        <city>London</city>
+        <country isocode="GBR">United Kingdom</country>
+      </location>
+    </record>
+    <record>
       <title>Railsbank</title>
       <subtitle>Engineer</subtitle>
       <summary>

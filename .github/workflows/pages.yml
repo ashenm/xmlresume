@@ -26,6 +26,18 @@ jobs:
           name: artifacts.tar.bz2
           path: artifacts.tar.bz2
     runs-on: ubuntu-latest
+  lint:
+    if: |
+      !startsWith(github.event.head_commit.message, '[Skip CI]')
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - run: |
+          sudo -H apt-get update && \
+          sudo -H apt-get install --yes libxml2-utils
+      - run: find . -type f -name '*.xml' | xargs xmllint --noout
+    runs-on: ubuntu-latest
   deploy:
     needs:
       - build

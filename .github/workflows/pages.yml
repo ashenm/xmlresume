@@ -1,9 +1,15 @@
 name: GitHub Pages
 
 on:
-  - push
-  - pull_request
-  - workflow_dispatch
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - '**'
+  workflow_dispatch:
+    branches:
+      - '**'
 
 jobs:
   build:

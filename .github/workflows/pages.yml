@@ -47,6 +47,7 @@ jobs:
   deploy:
     needs:
       - build
+      - lint
     if: |
       github.ref == 'refs/heads/master' &&
       github.event_name != 'pull_request' &&

@@ -59,6 +59,17 @@
       margin: 1mm 0 0 0;
     }
 
+    #resume .keywords {
+      margin: 1mm 0mm;
+    }
+
+    #resume .keyword {
+      background-color: #EEE;
+      border-radius: 1mm;
+      font-size: 3mm;
+      padding: 0mm 1mm;
+    }
+
     #resume > .metadata {
       text-align: center;
       padding: 15mm 0 15mm 0;
@@ -336,6 +347,9 @@
     <xsl:if test="boolean(articles)">
       <dl class="article"><xsl:apply-templates select="articles" /></dl>
     </xsl:if>
+    <xsl:if test="boolean(keywords)">
+      <p class="keywords"><xsl:apply-templates select="keywords" /></p>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="/resume/section/record/location">
@@ -362,6 +376,12 @@
     <xsl:for-each select="article">
       <dt class="property"><xsl:value-of select="property" /></dt>
       <dd class="value"><xsl:value-of select="value" /></dd>
+    </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template match="/resume/section/record/keywords">
+    <xsl:for-each select="keyword">
+      <span class="keyword"><xsl:value-of select="." /></span>
     </xsl:for-each>
   </xsl:template>
 

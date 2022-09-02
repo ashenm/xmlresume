@@ -33,6 +33,15 @@
         <city>Singapore</city>
         <country isocode="SGP">Singapore</country>
       </location>
+      <keywords>
+        <keyword>Anti-Corruption Layer</keyword>
+        <keyword>AWS</keyword>
+        <keyword>Jest</keyword>
+        <keyword>RESTful APIs</keyword>
+        <keyword>Slack Bots</keyword>
+        <keyword>TeamCity</keyword>
+        <keyword>TypeScript</keyword>
+      </keywords>
     </record>
     <record>
       <title>Railsbank</title>
@@ -45,6 +54,19 @@
         <city>London</city>
         <country isocode="GBR">United Kingdom</country>
       </location>
+      <keywords>
+        <keyword>AWS</keyword>
+        <keyword>CucumberJS</keyword>
+        <keyword>Elastic Stack (ELK)</keyword>
+        <keyword>GitLab CI/CD</keyword>
+        <keyword>GraphQL</keyword>
+        <keyword>Jest</keyword>
+        <keyword>Kubernetes</keyword>
+        <keyword>RESTful APIs</keyword>
+        <keyword>Slack Bots</keyword>
+        <keyword>Terraform</keyword>
+        <keyword>TypeScript</keyword>
+      </keywords>
     </record>
     <record>
       <title>Railsbank</title>
@@ -57,6 +79,19 @@
         <city>London</city>
         <country isocode="GBR">United Kingdom</country>
       </location>
+      <keywords>
+        <keyword>AWS</keyword>
+        <keyword>CucumberJS</keyword>
+        <keyword>Elastic Stack (ELK)</keyword>
+        <keyword>GitLab CI/CD</keyword>
+        <keyword>GraphQL</keyword>
+        <keyword>Jest</keyword>
+        <keyword>Kubernetes</keyword>
+        <keyword>RESTful APIs</keyword>
+        <keyword>Slack Bots</keyword>
+        <keyword>Terraform</keyword>
+        <keyword>TypeScript</keyword>
+      </keywords>
     </record>
     <record>
       <title>Al Iman Schools</title>
@@ -69,6 +104,14 @@
         <city>Colombo</city>
         <country isocode="LKA">Sri Lanka</country>
       </location>
+      <keywords>
+        <keyword>AsciiDoc</keyword>
+        <keyword>CSS</keyword>
+        <keyword>HTML</keyword>
+        <keyword>JavaScript</keyword>
+        <keyword>PyUnit</keyword>
+        <keyword>PyUnit</keyword>
+      </keywords>
     </record>
     <record>
       <title>British College of Applied Studies</title>
@@ -81,6 +124,13 @@
         <city>Colombo</city>
         <country isocode="LKA">Sri Lanka</country>
       </location>
+      <keywords>
+        <keyword>C</keyword>
+        <keyword>Firewalls</keyword>
+        <keyword>IDS/IPS Systems</keyword>
+        <keyword>JavaScript</keyword>
+        <keyword>Python</keyword>
+      </keywords>
     </record>
     <record>
       <title>Exetel PTY Limited</title>
@@ -91,6 +141,14 @@
         <city>Sydney</city>
         <country isocode="AUS">Australia</country>
       </location>
+      <keywords>
+        <keyword>Firewalls</keyword>
+        <keyword>IPv4</keyword>
+        <keyword>RADIUS Servers</keyword>
+        <keyword>SNMP</keyword>
+        <keyword>TCP/UPD</keyword>
+        <keyword>VoIP</keyword>
+      </keywords>
     </record>
     <record>
       <title>IKON Systems (Private) Limited</title>

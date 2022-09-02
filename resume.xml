@@ -110,7 +110,6 @@
         <keyword>HTML</keyword>
         <keyword>JavaScript</keyword>
         <keyword>PyUnit</keyword>
-        <keyword>PyUnit</keyword>
       </keywords>
     </record>
     <record>
@@ -159,6 +158,11 @@
         <city>Colombo</city>
         <country isocode="LKA">Sri Lanka</country>
       </location>
+      <keywords>
+        <keyword>AWS</keyword>
+        <keyword>Systemd</keyword>
+        <keyword>HAProxy</keyword>
+      </keywords>
     </record>
   </section>
 

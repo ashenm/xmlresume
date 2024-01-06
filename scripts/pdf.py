@@ -10,7 +10,7 @@
 
 from os import P_WAIT, path, remove, spawnlp
 from os.path import basename
-from PyPDF2 import PdfFileReader, PdfFileWriter
+from pypdf import PdfReader, PdfWriter
 from tempfile import NamedTemporaryFile
 from argparse import ArgumentParser
 from reportlab.pdfbase import pdfmetrics
@@ -27,7 +27,7 @@ parser.add_argument('--font-size', default=1, type=float, metavar='SIZE', help='
 args = parser.parse_args()
 
 # denouement
-output = PdfFileWriter()
+output = PdfWriter()
 
 # intermediate docs
 intermediate = NamedTemporaryFile(mode='wb')
@@ -39,8 +39,8 @@ spawnlp(P_WAIT, 'node', 'node', 'scripts/pdf.js', '--output={}'.format(intermedi
 # construct denouement
 with open(intermediate.name, 'rb') as resume, open(forefront.name, 'rb') as forepart:
 
-  intermediate.pdf = PdfFileReader(resume)
-  forefront.pages = intermediate.pdf.getNumPages()
+  intermediate.pdf = PdfReader(resume)
+  forefront.pages = len(intermediate.pdf.pages)
 
   forefront.canvas = Canvas(filename=forefront.name, pagesize=A4, initialFontName='Helvetica')
 
@@ -62,16 +62,16 @@ with open(intermediate.name, 'rb') as resume, open(forefront.name, 'rb') as fore
   forefront.canvas.save()
 
   # read constructed custom headers
-  forefront.pdf = PdfFileReader(forepart)
+  forefront.pdf = PdfReader(forepart)
 
   # merge resume and headers
   for i in range(0, forefront.pages):
-    intermediate.pdf.getPage(i).mergePage(forefront.pdf.getPage(i))
-    output.addPage(intermediate.pdf.getPage(i))
+    intermediate.pdf.pages[i].merge_page(forefront.pdf.pages[i])
+    output.add_page(intermediate.pdf.pages[i])
 
   # add metadata
   # https://www.adobe.com/content/dam/acom/en/devnet/acrobat/pdfs/pdfmark_reference.pdf
-  output.addMetadata({
+  output.add_metadata({
     '/Subject': 'Curriculum Vitae',
     '/Creator': 'XMLResume (https://github.com/ashenm/xmlresume)',
     '/Title': 'Curriculum Vitae - Ashen Gunaratne',
@@ -79,7 +79,7 @@ with open(intermediate.name, 'rb') as resume, open(forefront.name, 'rb') as fore
   })
 
   # configure initial view
-  output.setPageLayout('/SinglePage')
+  output.page_layout = '/SinglePage'
 
   # write output
   with open('resume.pdf', 'wb') as file:

@@ -63,7 +63,7 @@ jobs:
       - run: |
           git init
           git checkout --orphan gh-pages
-          git config user.email "mail@ashenm.ml"
+          git config user.email "mail@ashenm.dev"
           git config user.name "Ashen Gunaratne"
           git add --all --force .
           git commit --quiet --message "Deploy ashenm/xmlresume to github.com/${GITHUB_REPOSITORY}.git:gh-pages"

@@ -5,7 +5,7 @@
 # Clean build artifacts
 #
 # Ashen Gunaratne
-# mail@ashenm.ml
+# mail@ashenm.dev
 #
 
 from os import P_WAIT, spawnlp

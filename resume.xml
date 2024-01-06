@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="resume.xsl"?>
-<!-- https://www.ashenm.ml/resume -->
+<!-- https://www.ashenm.dev/resume -->
 <resume>
 
   <metadata>
@@ -13,7 +13,7 @@
     </address>
     <contact>
       <mobile href="tel:+94-77-429-9712">(+94) 77 429 9712</mobile>
-      <email href="mailto:mail@ashenm.ml">mail@ashenm.ml</email>
+      <email href="mailto:mail@ashenm.dev">mail@ashenm.dev</email>
     </contact>
     <sites>
       <site name="LinkedIn" href="https://www.linkedin.com/in/ashenm/">linkedin.com/in/ashenm</site>

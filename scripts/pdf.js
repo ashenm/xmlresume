@@ -20,7 +20,7 @@ if (!argv.source || !argv.output) {
 }
 
 // generate pdf
-puppeteer.launch({ args: [ '--no-sandbox' ] }).then(async browser => {
+puppeteer.launch({ args: [ '--no-sandbox' ], headless: "new" }).then(async browser => {
 
   const page = await browser.newPage();
   const response = await page.goto(argv.source);

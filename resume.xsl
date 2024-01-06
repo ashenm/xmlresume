@@ -21,7 +21,7 @@
       <meta property="og:site_name" content="Ashen Gunaratne" />
       <meta property="og:title" content="R&#180;sum&#180; | Ashen Gunaratne" />
       <meta property="og:description" content="Curriculum Vitae of Ashen Gunaratne" />
-      <meta property="og:url" content="https://www.ashenm.ml/resume" />
+      <meta property="og:url" content="https://www.ashenm.dev/resume" />
       <meta property="og:locale" content="en" />
 
       <title>Résumé | Ashen Gunaratne</title>

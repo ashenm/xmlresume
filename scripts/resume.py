@@ -5,7 +5,7 @@
 # Generate and prettify resume.html
 #
 # Ashen Gunaratne
-# mail@ashenm.ml
+# mail@ashenm.dev
 #
 
 from lxml import etree

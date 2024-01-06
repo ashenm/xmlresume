@@ -5,7 +5,7 @@
 # Generate resume PDF
 #
 # Ashen Gunaratne
-# mail@ashenm.ml
+# mail@ashenm.dev
 #
 
 from os import P_WAIT, path, remove, spawnlp

@@ -5,7 +5,7 @@
 # Reindent BeautifulSoup prettified HTML
 #
 # Ashen Gunaratne
-# mail@ashenm.ml
+# mail@ashenm.dev
 #
 
 # built-in `compile` not being used

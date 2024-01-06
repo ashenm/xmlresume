@@ -5,7 +5,7 @@
 # Install XMLResume build dependencies
 #
 # Ashen Gunaratne
-# mail@ashenm.ml
+# mail@ashenm.dev
 #
 
 set -e

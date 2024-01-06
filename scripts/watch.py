@@ -5,7 +5,7 @@
 # Watch changes and rebuild artifacts
 #
 # Ashen Gunaratne
-# mail@ashenm.ml
+# mail@ashenm.dev
 #
 
 from time import sleep

@@ -5,7 +5,7 @@
  * Generate intermediate resume PDF
  *
  * Ashen Gunaratne
- * mail@ashenm.ml
+ * mail@ashenm.dev
  *
  */
 

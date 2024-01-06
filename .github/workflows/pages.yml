@@ -16,10 +16,10 @@ jobs:
     if: |
       !startsWith(github.event.head_commit.message, '[Skip CI]')
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
       - uses: actions/setup-node@v4
@@ -27,7 +27,7 @@ jobs:
           node-version: 20.x
       - run: make install
       - run: make gh-pages/tarball
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: artifacts.tar.bz2
           path: artifacts.tar.bz2
@@ -36,7 +36,7 @@ jobs:
     if: |
       !startsWith(github.event.head_commit.message, '[Skip CI]')
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
       - run: |
@@ -53,7 +53,7 @@ jobs:
       github.event_name != 'pull_request' &&
       !startsWith(github.event.head_commit.message, '[Skip Deploy]')
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
           name: artifacts.tar.bz2
       - run: tar --extract --bzip2 --verbose --file=artifacts.tar.bz2

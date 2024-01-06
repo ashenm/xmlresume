@@ -149,7 +149,7 @@
       margin: 0 0 0.5mm 0;
     }
 
-    #resume > .section > .records > .record:not(:first-of-type) {
+    #resume > .section > .records > .record + .record {
       padding: 5mm 0 0 0;
     }
 
@@ -167,8 +167,12 @@
       margin: 0;
     }
 
-    #resume > .section > .records > .list > .item:not(:last-of-type) > .record::after {
+    #resume > .section > .records > .list > .item > .record::after {
       content: ", ";
+    }
+
+    #resume > .section > .records > .list > .item:last-of-type > .record::after {
+      content: "";
     }
 
     #resume > .section > .records > .list > .item:first-of-type > .record {
@@ -183,12 +187,15 @@
 
     @media print {
 
+      /* remove all background graphics */
+      html, body { background-color: initial; }
+
       /* fill resume edge-to-edge  */
       main { margin: 0; }
 
       /* reset transformations */
       /* reduce margins to event height */
-      #resume { height: calc(100% - 20mm)!important; transform: initial!important; }
+      #resume { height: 100%!important; transform: initial!important; }
 
       /* remove hyperlink styles */
       #resume a { color: inherit; }

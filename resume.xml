@@ -25,10 +25,34 @@
   <section>
     <title>experience</title>
     <record>
+      <title>Secure Agility</title>
+      <subtitle>Lead DevOps Engineer</subtitle>
+      <summary>Lead cross-SaaS integration architect; Design, author, and oversea custom integrations and workflows interconnecting multiple SaaS services.</summary>
+      <duration start="2023-08-01T00:00:00Z" end="" />
+      <location>
+        <city>Sydney</city>
+        <country isocode="AUS">Australia</country>
+      </location>
+      <keywords>
+        <keyword>Alembic</keyword>
+        <keyword>Autotask</keyword>
+        <keyword>Azure DevOps Services</keyword>
+        <keyword>Azure</keyword>
+        <keyword>Ekahuau</keyword>
+        <keyword>Float</keyword>
+        <keyword>GitHub</keyword>
+        <keyword>ITGlue</keyword>
+        <keyword>LogicMonitor</keyword>
+        <keyword>PowerBI</keyword>
+        <keyword>Python</keyword>
+        <keyword>Terraform</keyword>
+      </keywords>
+    </record>
+    <record>
       <title>Singlife</title>
       <subtitle>Technical Lead</subtitle>
       <summary>Mobile backend tech lead; Design, author, and review RESTful API specifications and moderate related infrastructure cohering to compliance and security statues.</summary>
-      <duration start="2022-04-04T00:00:00Z" end="" />
+      <duration start="2022-04-04T00:00:00Z" end="2023-07-31T00:00:00Z" />
       <location>
         <city>Singapore</city>
         <country isocode="SGP">Singapore</country>

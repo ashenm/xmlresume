@@ -359,16 +359,40 @@
   <section>
     <title>projects</title>
     <record>
-      <title>Thin Client Infrastructure for Lab Environment</title>
-      <summary>Designed and soft-launched a tier-two compliant laboratory infrastructure comprising a total capacity of ~ten-hundred diskless nodes with a LWAPP powered wireless access network.</summary>
+      <title>Singlife's BaaS provider reverse-engeering</title>
+      <list>
+        <item>Associate technical lead for Railsbank replacement with in-house BaaS service</item>
+        <item>Coarchitectured in-house replacement service to extactly replicate Railsbank functionalities</item>
+        <item>Designed and authored the state machines for transaction execution - interledger, manual credit, and manual debit transactions</item>
+        <item>Designed and authored DBS outbound and inbound integration connectors to facilitate Fast and PayNow payments and ICN notifications</item>
+      </list>
     </record>
     <record>
-      <title>Distributed Management Implementation</title>
-      <summary>Drafted a RPC-based policy synchronisation discharge for the multipoint bandwidth management system subsuming an aggregated link amplitude of 30 Gb/s.</summary>
+      <title>Habitto Money GraphQL and REST backend</title>
+      <list>
+        <item>Lead consultant for setting up initial backend monorepo and related pipelines</item>
+        <item>Setup initial Nx monorepo, BitBucket OpenID runner authentication, and inital Terraform setup</item>
+        <item>Later, consultant and lead developer for authoring fully automated self provisioning review environments using BitBucket CI/CD with multiple deployables</item>
+        <item>Lead developer for authoring a seamless custom in-house replacement solution for Fivetran</item>
+      </list>
     </record>
     <record>
-      <title>On-Premises to Cloud Migration</title>
-      <summary>Designed and overviewed the migration of an on-premises infrastructure for collection of massive datasets capable of 500M HTTP hits per day with peaks of 10K per second.</summary>
+      <title>Dealt Australia</title>
+      <list>
+        <item>Lead architect for migrating existing customer-hosted Hyperledger Fabric to ImmuDB</item>
+        <item>Automated all application deployments and configuration management using AWS CodeDeploy and BitBucket CI/CD</item>
+        <item>Migrated all existing infrastructure to use IaC for management and provisioning and added enforcement checks to prevent manual infastructure manipulations</item>
+        <item>Revamped virtual cloud networking to incorporate public, private, and NAT subnets and redesigned the microservice entrypoints and inter-service communication</item>
+        <item>Standardized logging, monitoring, and alerting</item>
+      </list>
+    </record>
+    <record>
+      <title>CaterCare Australia</title>
+      <list>
+        <item>Lead consultant and developer for standardizing GitHub developer workflows</item>
+        <item>Wrote a custom extensible GitHub Action to facilitate auto-labelling and auto-approving for a specific set of pull-requests obeying a predefined ruleset that require no reviews</item>
+        <item>Set up branch/tag protection rules, code owners, secret scanning, and repo properties to standardize merging and pull-request approvals</item>
+      </list>
     </record>
   </section>
 

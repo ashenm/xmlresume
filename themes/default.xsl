@@ -179,6 +179,11 @@
       text-transform: capitalize;
     }
 
+    #resume > .section > .records > .record > .list {
+      margin: 0;
+      padding-inline-start: 2.5ch;
+    }
+
     @font-face {
       font-style: normal;
       font-family: 'Garamond';
@@ -190,7 +195,7 @@
       /* remove all background graphics */
       html, body { background-color: initial; }
 
-      /* fill resume edge-to-edge  */
+      /* fill resume edge-to-edge */
       main { margin: 0; }
 
       /* reset transformations */
@@ -280,19 +285,25 @@
         <xsl:apply-templates select="metadata" />
       </div>
       <xsl:for-each select="/resume/section">
-        <div class="section"><xsl:apply-templates select="." /></div>
+        <div class="section">
+          <xsl:apply-templates select="." />
+        </div>
       </xsl:for-each>
     </div>
   </xsl:template>
 
   <xsl:template match="/resume/metadata">
-    <h1 class="title"><xsl:value-of select="name" /></h1>
+    <h1 class="title">
+      <xsl:value-of select="name" />
+    </h1>
     <div class="section sites">
       <h2 class="title">sites</h2>
       <xsl:for-each select="sites/site">
         <h3 class="record">
           <a>
-            <xsl:attribute name="href"><xsl:value-of select="@href" /></xsl:attribute>
+            <xsl:attribute name="href">
+              <xsl:value-of select="@href" />
+            </xsl:attribute>
             <xsl:value-of select="." />
           </a>
         </h3>
@@ -302,13 +313,17 @@
       <h2 class="title">contact</h2>
       <h3 class="record">
         <a>
-          <xsl:attribute name="href"><xsl:value-of select="contact/mobile/@href" /></xsl:attribute>
+          <xsl:attribute name="href">
+            <xsl:value-of select="contact/mobile/@href" />
+          </xsl:attribute>
           <xsl:value-of select="contact/mobile" />
         </a>
       </h3>
       <h3 class="record">
         <a>
-          <xsl:attribute name="href"><xsl:value-of select="contact/email/@href" /></xsl:attribute>
+          <xsl:attribute name="href">
+            <xsl:value-of select="contact/email/@href" />
+          </xsl:attribute>
           <xsl:value-of select="contact/email" />
         </a>
       </h3>
@@ -316,79 +331,119 @@
   </xsl:template>
 
   <xsl:template match="/resume/section">
-	<div class="titles">
-	  <h2 class="title"><xsl:value-of select="title" /></h2>
-	</div>
-	<div class="records">
+    <div class="titles">
+      <h2 class="title">
+        <xsl:value-of select="title" />
+      </h2>
+    </div>
+    <div class="records">
       <xsl:if test="not(list)">
-	    <xsl:for-each select="record">
-		  <div class="record"><xsl:apply-templates select="." /></div>
-	    </xsl:for-each>
+        <xsl:for-each select="record">
+          <div class="record">
+            <xsl:apply-templates select="." />
+          </div>
+        </xsl:for-each>
       </xsl:if>
-	  <xsl:if test="boolean(list)">
-		<ul class="list">
+      <xsl:if test="boolean(list)">
+        <ul class="list">
           <xsl:for-each select="list/item">
-            <li class="item"><h3 class="record"><xsl:value-of select="." /></h3></li>
+            <li class="item">
+              <h3 class="record">
+                <xsl:value-of select="." />
+              </h3>
+            </li>
           </xsl:for-each>
         </ul>
-	  </xsl:if>
-	</div>
+      </xsl:if>
+    </div>
   </xsl:template>
 
   <xsl:template match="/resume/section/record">
-    <h3 class="title"><xsl:value-of select="title" /></h3>
-	<p class="location"><xsl:apply-templates select="location" /></p>
+    <h3 class="title">
+      <xsl:value-of select="title" />
+    </h3>
+    <p class="location">
+      <xsl:apply-templates select="location" />
+    </p>
     <h4 class="subtitle">
       <xsl:if test="not(transcript)">
         <xsl:value-of select="subtitle" />
       </xsl:if>
       <xsl:if test="boolean(transcript)">
         <a>
-          <xsl:attribute name="href"><xsl:value-of select="transcript" /></xsl:attribute>
+          <xsl:attribute name="href">
+            <xsl:value-of select="transcript" />
+          </xsl:attribute>
           <xsl:value-of select="subtitle" />
         </a>
       </xsl:if>
     </h4>
-	<p class="duration"><xsl:apply-templates select="duration" /></p>
-	<p class="summary"><xsl:value-of select="summary" disable-output-escaping="yes" /></p>
+    <p class="duration">
+      <xsl:apply-templates select="duration" />
+    </p>
+    <p class="summary">
+      <xsl:value-of select="summary" disable-output-escaping="yes" />
+    </p>
+    <xsl:if test="boolean(list)">
+      <ul class="list">
+        <xsl:for-each select="list/item">
+          <li class="item">
+            <xsl:value-of select="." />
+          </li>
+        </xsl:for-each>
+      </ul>
+    </xsl:if>
     <xsl:if test="boolean(articles)">
-      <dl class="article"><xsl:apply-templates select="articles" /></dl>
+      <dl class="article">
+        <xsl:apply-templates select="articles" />
+      </dl>
     </xsl:if>
     <xsl:if test="boolean(keywords)">
-      <p class="keywords"><xsl:apply-templates select="keywords" /></p>
+      <p class="keywords">
+        <xsl:apply-templates select="keywords" />
+      </p>
     </xsl:if>
   </xsl:template>
 
   <xsl:template match="/resume/section/record/location">
     <span class="city">
       <xsl:value-of select="city" />
-    </span>,
-    <span class="country">
-      <xsl:attribute name="data-isocode"><xsl:value-of select="@isocode" /></xsl:attribute>
+    </span>, <span class="country">
+      <xsl:attribute name="data-isocode">
+        <xsl:value-of select="@isocode" />
+      </xsl:attribute>
       <xsl:value-of select="country" />
     </span>
   </xsl:template>
 
   <xsl:template match="/resume/section/record/duration">
     <span class="date">
-      <xsl:attribute name="data-utc"><xsl:value-of select="@start" /></xsl:attribute>  
-    </span>
-    -
-    <span class="date">
-      <xsl:attribute name="data-utc"><xsl:value-of select="@end" /></xsl:attribute>
+      <xsl:attribute name="data-utc">
+        <xsl:value-of select="@start" />
+      </xsl:attribute>
+    </span> - <span class="date">
+      <xsl:attribute name="data-utc">
+        <xsl:value-of select="@end" />
+      </xsl:attribute>
     </span>
   </xsl:template>
 
   <xsl:template match="/resume/section/record/articles">
     <xsl:for-each select="article">
-      <dt class="property"><xsl:value-of select="property" /></dt>
-      <dd class="value"><xsl:value-of select="value" /></dd>
+      <dt class="property">
+        <xsl:value-of select="property" />
+      </dt>
+      <dd class="value">
+        <xsl:value-of select="value" />
+      </dd>
     </xsl:for-each>
   </xsl:template>
 
   <xsl:template match="/resume/section/record/keywords">
     <xsl:for-each select="keyword">
-      <span class="keyword"><xsl:value-of select="." /></span>
+      <span class="keyword">
+        <xsl:value-of select="." />
+      </span>
     </xsl:for-each>
   </xsl:template>
 

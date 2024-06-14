@@ -274,12 +274,6 @@
       <title>Lakeland Inter-American School</title>
       <subtitle>Pearson Edexcel AS Level</subtitle>
       <transcript>https://courses.edx.org/certificates/e23bace355ab497f9388ac6d0562525e</transcript>
-      <articles>
-        <article>
-          <property>Accounting</property>
-          <value>A</value>
-        </article>
-      </articles>
       <duration start="2014-06-01T00:00:00Z" end="2015-07-01T00:00:00Z" />
       <location>
         <city>Colombo</city>
@@ -290,32 +284,6 @@
       <title>Lakeland Inter-American School</title>
       <subtitle>Pearson Edexcel Ordinary Level</subtitle>
       <transcript>https://cdn.glitch.com/bddbe95a-e8d0-4ea0-8afc-88c93c2ebd46%2Folevel.jpg</transcript>
-      <articles>
-        <article>
-          <property>Mathematics</property>
-          <value>A*</value>
-        </article>
-        <article>
-          <property>Further Pure Mathematics</property>
-          <value>A</value>
-        </article>
-        <article>
-          <property>Accounting</property>
-          <value>A</value>
-        </article>
-        <article>
-          <property>Business Studies</property>
-          <value>B</value>
-        </article>
-        <article>
-          <property>Economics</property>
-          <value>B</value>
-        </article>
-        <article>
-          <property>English Language</property>
-          <value>B</value>
-        </article>
-      </articles>
       <duration start="2011-03-01T00:00:00Z" end="2014-06-01T00:00:00Z" />
       <location>
         <city>Colombo</city>

@@ -325,38 +325,6 @@
   </section>
 
   <section>
-    <title>languages</title>
-    <list>
-      <item>C</item>
-      <item>C++</item>
-      <item>C#</item>
-      <item>CSS</item>
-      <item>DTD</item>
-      <item>HTML</item>
-      <item>Java</item>
-      <item>JavaScript</item>
-      <item>LISP</item>
-      <item>NesC</item>
-      <item>Objective-C</item>
-      <item>Pascal</item>
-      <item>Perl</item>
-      <item>PHP</item>
-      <item>Python</item>
-      <item>SQL</item>
-      <item>SVG</item>
-      <item>VBScript</item>
-      <item>XHTML</item>
-      <item>XML Schema</item>
-      <item>XPath</item>
-      <item>XQuery</item>
-      <item>XSLT</item>
-      <item>English</item>
-      <item>Japanese</item>
-      <item>Sinhala</item>
-    </list>
-  </section>
-
-  <section>
     <title>projects</title>
     <record>
       <title>Singlife's BaaS provider reverse-engeering</title>

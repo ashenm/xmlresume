@@ -201,6 +201,22 @@
   </section>
 
   <section>
+    <title>open source contributions</title>
+    <record>
+      <title>Azure Resource Manager</title>
+      <subtitle>Terraform Provider</subtitle>
+      <transcript>https://github.com/hashicorp/terraform-provider-azurerm/commits?author=ashenm</transcript>
+      <summary>Contributions include feature implementations and bug fixes on existing resource types and data sources.</summary>
+    </record>
+    <record>
+      <title>Databricks</title>
+      <subtitle>Terraform Provider</subtitle>
+      <transcript>https://github.com/databricks/terraform-provider-databricks/commits?author=ashenm</transcript>
+      <summary>Contributions include feature implementations and bug fixes on existing resource types and data sources.</summary>
+    </record>
+  </section>
+
+  <section>
     <title>research interests</title>
     <list>
       <item>cybersecurity</item>

@@ -11,7 +11,7 @@
 
 const path = require('path');
 const puppeteer = require('puppeteer');
-const argv = require('yargs').argv;
+const argv = require('yargs')(process.argv).argv;
 
 // ensure requisite arguments
 if (!argv.source || !argv.output) {

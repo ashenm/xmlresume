@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="Ashen Gunaratne" name="author"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <meta content="Curriculum Vitae of Ashen Gunaratne" name="description"/>
+    <meta content="ashen, gunaratne, homepage, bio, curriculum vitae, cv, resume" name="keywords"/>
+    <meta content="profile" property="og:type"/>
+    <meta content="Ashen" property="og:profile:first_name"/>
+    <meta content="Gunaratne" property="og:profile:last_name"/>
+    <meta content="male" property="og:profile:gender"/>
+    <meta content="https://avatars1.githubusercontent.com/u/16164426?s=400&amp;v=4" property="og:image"/>
+    <meta content="Ashen Gunaratne" property="og:site_name"/>
+    <meta content="R&acute;sum&acute; | Ashen Gunaratne" property="og:title"/>
+    <meta content="Curriculum Vitae of Ashen Gunaratne" property="og:description"/>
+    <meta content="https://www.ashenm.dev/resume" property="og:url"/>
+    <meta content="en" property="og:locale"/>
+    <title>R&eacute;sum&eacute; | Ashen Gunaratne</title>
+    <style>
+      html, body {
+        margin: 0;
+        background-color: #525659;
+      }
+
+      header {
+        display: none;
+      }
+
+      main {
+        width: 210mm;
+        margin: 2.5mm auto;
+      }
+
+      #resume {
+        width: 210mm;
+        min-height: 297mm;
+        background-color: #FFF;
+        transform-origin: top left;
+        font-family: sans-serif;
+        display: flex;
+      }
+
+      #resume a {
+        color: #007BFF;
+        text-decoration: none;
+      }
+
+      #resume a:hover {
+        text-decoration: underline;
+      }
+
+      #resume .title, #resume .subtitle,
+      #resume .duration, #resume .location {
+        margin: 0 0 0.5mm 0;
+        font-weight: normal;
+      }
+
+      #resume .font-italic {
+        font-style: italic;
+      }
+
+      #sidebar, #premier {
+        padding: 15mm 7mm 5mm 7mm;
+      }
+
+      #sidebar {
+        color: #E1E1E1;
+        background-color: #293E49;
+        flex: 0 0 22.5%;
+      }
+
+      #sidebar > .section > .title {
+        margin: 0 0 4mm 0;
+        text-transform: capitalize;
+        font-size: 5mm;
+      }
+
+      #sidebar > .section > .record {
+        margin: 1mm 0;
+        font-size: 3.5mm;
+      }
+
+      #sidebar > .section + .section {
+        padding-top: 8mm;
+      }
+
+      #sidebar > .section + .section > .record {
+        text-transform: capitalize;
+        font-weight: normal;
+      }
+
+      #sidebar > .section:first-child > a.site,
+      #sidebar > .section:first-child > a.contact {
+        display: block;
+        font-style: normal;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #sidebar > .section:first-child > a.site > .record,
+      #sidebar > .section:first-child > a.contact > .record {
+        display: initial;
+        font-weight: normal;
+        font-size: 3.5mm;
+      }
+
+      #sidebar > .section:first-child > a.site > .record > span {
+        color: #949494;
+        font-size: 4mm;
+        display: block;
+      }
+
+      #sidebar > .section:first-child > a.site > .record > span::before {
+        content: " ";
+      }
+
+      /* mobile number */
+      #sidebar > .section:first-child > .contact:nth-child(2) {
+        margin: 5mm 0 1mm 0;
+      }
+
+      /* email address */
+      #sidebar > .section:first-child > .contact:nth-child(3) {
+        margin: 0 0 5mm 0;
+      }
+
+      /* name */
+      #premier > div:first-child > .title {
+        font-size: 7.5mm;
+      }
+
+      /* heading */
+      #premier > div:first-child > .subtitle {
+        font-size: 5mm;
+        margin: 0;
+      }
+
+      #premier > .section > .title {
+        font-size: 4.5mm;
+        break-inside: avoid;
+        text-transform: capitalize;
+        padding: 7.5mm 0 1.5mm 0;
+      }
+
+      #premier > .section > .title::before {
+        width: 15mm;
+        height: 0.75mm;
+        display: block;
+        background: #9E9E9E;
+        margin-bottom: 2.75mm;
+        content: "";
+      }
+
+      #premier > .section > .list {
+        margin: 0;
+        padding: 3mm 0 0 0;
+      }
+
+      #premier > .section > ul.list > li {
+        display: inline;
+      }
+
+      #premier > .section > ul.list > li > .record {
+        display: initial;
+        font-weight: normal;
+        font-size: 3.75mm;
+      }
+
+      #premier > .section > ul.list > li:not(:last-of-type) > .record::after {
+        content: ","
+      }
+
+      #premier > .section > .record {
+        padding: 1.75mm 0;
+        break-inside: avoid;
+      }
+
+      #premier > .section > .record > .title {
+        font-weight: bold;
+        font-size: 4mm;
+      }
+
+      #premier > .section > .record > .subtitle {
+        font-size: 3.75mm;
+      }
+
+      #premier > .section > .record > .duration,
+      #premier > .section > .record > .location {
+        font-size: 3.55mm;
+        margin-bottom: 0.25mm;
+      }
+
+      #premier > .section > .record > .location {
+        color: #B1B1B1;
+      }
+
+      #premier > .section > .record > .summary,
+      #premier > .section > .record > .article {
+        font-size: 3.75mm;
+        margin: 1mm 0 0 0;
+      }
+
+      #premier > .section > .record > .article {
+        flex-wrap: wrap;
+        list-style-type: disc;
+        padding: 0 0 0 2.5ch;
+        display: flex;
+      }
+
+      #premier > .section > .record > .article > dt {
+        flex: 0 0 50%;
+        display: list-item;
+        margin: 0 0 1mm 0;
+      }
+
+      @font-face {
+        font-family: 'sans-serif';
+        font-style: normal;
+        src: url(fonts/refsan.ttf) format('truetype'), url(https://ashenm.github.io/xmlresume/fonts/refsan.ttf) format('truetype'), local('sans-serif');
+      }
+
+      @media print {
+
+        /* fill resume edge-to-edge  */
+        main { margin: 0; }
+
+        /* reset transformations */
+        #resume { transform: initial!important; }
+
+        /* remove hyperlink styles */
+        #resume a { color: inherit; }
+
+      }
+
+      @media screen {
+        #resume { box-shadow: 0 0 2.5mm; }
+      }
+
+      @page {
+        margin: 0;
+        size: A4 portrait;
+      }
+    </style>
+    <script>
+      var scale = function scaleElementResume () {
+
+        var resume = document.getElementById('resume');
+
+        // dimensions in pixels
+        var styles = window.getComputedStyle(resume);
+        var height = styles.height.replace('px', '');
+        var width = styles.width.replace('px', '');
+
+        // mm to pixel ratio
+        var ratio = styles.minHeight.replace('px', '') / 297;
+
+        // height sidebar to tally number of pages
+        resume.style.height = Math.ceil(height / ratio / 297) * 297 + 'mm';
+
+        // shadow reference container element
+        resume.container = resume.parentElement;
+
+        // scale only on smaller devices
+        // remove any exsisting transformations
+        if (window.matchMedia('(min-width: 210mm)').matches) {
+          resume.container.style.height = '';
+          resume.container.style.width = '';
+          resume.style.transform = '';
+          return;
+        }
+
+        // dimensions after transform
+        resume.container.width = document.documentElement.clientWidth - ratio * 5;
+        resume.scale = resume.container.width / width;
+        resume.container.height = resume.scale * window.getComputedStyle(resume.container).height.replace('px', '');
+
+        // transform elements
+        resume.container.style.height = resume.container.height + 'px';
+        resume.container.style.width = resume.container.width + 'px';
+        resume.style.transform = 'scale(' + resume.scale + ')';
+
+      };
+
+      // TEMP avoid page breaks after section titles
+      // https://bugs.webkit.org/show_bug.cgi?id=5097
+      // https://bugzilla.mozilla.org/show_bug.cgi?id=132035
+      document.addEventListener('DOMContentLoaded', function () { document.querySelectorAll('#premier > .section > .title').forEach(function (e) { e.style.height = + window.getComputedStyle(e).height.replace('px', '') + + (e.style.marginBottom = -1 * e.parentElement.querySelector('.record').clientHeight + 'px').replace(/-|px/g, '') + 'px'; }); }, false);
+
+      // transform dates on initial load
+      document.addEventListener('DOMContentLoaded', function () { document.querySelectorAll('.date').forEach(function (e) { e.innerText = e.dataset.utc && (new Date(e.dataset.utc)).toLocaleString('en', { month: 'long', year: 'numeric' }) || 'Present'; }); }, false);
+
+      // scale on initial load and and on viewport resizing
+      document.addEventListener('DOMContentLoaded', scale, false);
+      window.addEventListener('resize', scale, false);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Ashen Gunaratne</h1>
+    </header>
+    <main>
+      <div id="resume">
+        <aside id="sidebar">
+          <div class="section">
+            <h2 class="title">contact</h2>
+            <a class="contact" href="tel:+94-77-429-9712">
+              <h3 class="record">(+94) 77 429 9712</h3>
+            </a>
+            <a class="contact" href="mailto:mail@ashenm.dev">
+              <h3 class="record">mail@ashenm.dev</h3>
+            </a>
+            <a class="site" href="https://www.linkedin.com/in/ashenm/">
+              <h3 class="record">linkedin.com/in/ashenm
+                <span>(LinkedIn)</span>
+              </h3>
+            </a>
+            <a class="site" href="https://launchpad.net/~ashenm">
+              <h3 class="record">launchpad.net/~ashenm
+                <span>(Launchpad)</span>
+              </h3>
+            </a>
+            <a class="site" href="https://github.com/ashenm">
+              <h3 class="record">github.com/ashenm
+                <span>(GitHub)</span>
+              </h3>
+            </a>
+          </div>
+          <div class="section">
+            <h2 class="title">research interests</h2>
+            <h3 class="record">cybersecurity</h3>
+            <h3 class="record">digital forensics</h3>
+            <h3 class="record">botnets</h3>
+            <h3 class="record">computer science education</h3>
+            <h3 class="record">distance learning</h3>
+            <h3 class="record">collaborative learning</h3>
+            <h3 class="record">computer-assisted instruction</h3>
+          </div>
+        </aside>
+        <div id="premier">
+          <div>
+            <p class="title">
+              Ashen Gunaratne
+            </p>
+            <p class="subtitle">
+            </p>
+          </div>
+          <div class="section">
+            <h2 class="title">experience</h2>
+            <div class="record">
+              <h3 class="title">Secure Agility</h3>
+              <h4 class="subtitle">Lead DevOps Engineer</h4>
+              <p class="duration">
+                <span class="date" data-utc="2023-08-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Sydney</span>,
+                <span class="country" data-isocode="">Australia</span>
+              </p>
+              <p class="summary">
+                Lead cross-SaaS integration architect; Design, author, and oversea custom integrations and workflows interconnecting multiple SaaS services.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Singlife</h3>
+              <h4 class="subtitle">Technical Lead</h4>
+              <p class="duration">
+                <span class="date" data-utc="2022-04-04T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2023-07-31T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Singapore</span>,
+                <span class="country" data-isocode="">Singapore</span>
+              </p>
+              <p class="summary">
+                Mobile backend tech lead; Design, author, and review RESTful API specifications and moderate related infrastructure cohering to compliance and security statues.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Railsbank</h3>
+              <h4 class="subtitle">Associate Technical Lead</h4>
+              <p class="duration">
+                <span class="date" data-utc="2021-12-28T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2022-03-28T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">London</span>,
+                <span class="country" data-isocode="">United Kingdom</span>
+              </p>
+              <p class="summary">
+                BaaS integrations tech lead; Plan, design, and oversea regulated provider infrastructure integrations conforming to compliance and security statutes.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Railsbank</h3>
+              <h4 class="subtitle">Engineer</h4>
+              <p class="duration">
+                <span class="date" data-utc="2020-12-28T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2021-12-28T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">London</span>,
+                <span class="country" data-isocode="">United Kingdom</span>
+              </p>
+              <p class="summary">
+                BaaS integrations engineer; Design, author, and review regulated provider infrastructure integrations conforming to compliance and security statutes.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Al Iman Schools</h3>
+              <h4 class="subtitle">Educator</h4>
+              <p class="duration">
+                <span class="date" data-utc="2020-10-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2020-12-31T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Colombo</span>,
+                <span class="country" data-isocode="">Sri Lanka</span>
+              </p>
+              <p class="summary">
+                Educator for computer science; Responsible for designing, implementing, and delivering custom tailored curriculums for key stages three, four, and five with emphasis on art of programming and integrating computer science in the domain of other subjects.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">British College of Applied Studies</h3>
+              <h4 class="subtitle">Lecturer</h4>
+              <p class="duration">
+                <span class="date" data-utc="2018-07-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2019-07-31T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Colombo</span>,
+                <span class="country" data-isocode="">Sri Lanka</span>
+              </p>
+              <p class="summary">
+                Instructor for
+                <i>Pearson BTEC HND</i>
+                in Computing; Responsible for level 5 specialist units:
+                <i>Computer Systems Architecture</i>,
+                <i>Data Structures and Algorithms</i>,
+                <i>Discrete Mathematics</i>,
+                <i>Network Management</i>, and
+                <i>Network Security</i>.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Exetel PTY Limited</h3>
+              <h4 class="subtitle">Network Engineer</h4>
+              <p class="duration">
+                <span class="date" data-utc="2016-10-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2017-02-01T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Sydney</span>,
+                <span class="country" data-isocode="">Australia</span>
+              </p>
+              <p class="summary">
+                Govern, implement, and troubleshoot real-time traffic steering policies to ensure critical application delivery, value-added services, and user quality of experience driving profitability of key deliverables in the digital data &amp; device space in terms of revenue, users, traffic across 30 Gb/s data link.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">IKON Systems (Private) Limited</h3>
+              <h4 class="subtitle">Chief Information Officer</h4>
+              <p class="duration">
+                <span class="date" data-utc="2016-01-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2016-10-01T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Colombo</span>,
+                <span class="country" data-isocode="">Sri Lanka</span>
+              </p>
+              <p class="summary">
+                Direct and manage computing and information technology strategic plans, policies, programs, schedules, and responsible for advertising network&rsquo;s scalability, security, and capacity-planning.
+              </p>
+            </div>
+          </div>
+          <div class="section">
+            <h2 class="title">open source contributions</h2>
+            <div class="record">
+              <h3 class="title">Azure Resource Manager</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://github.com/hashicorp/terraform-provider-azurerm/commits?author=ashenm">Terraform Provider</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+                Contributions include feature implementations and bug fixes on existing resource types and data sources.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Databricks</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://github.com/databricks/terraform-provider-databricks/commits?author=ashenm">Terraform Provider</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+                Contributions include feature implementations and bug fixes on existing resource types and data sources.
+              </p>
+            </div>
+          </div>
+          <div class="section">
+            <h2 class="title">education</h2>
+            <div class="record">
+              <h3 class="title">Harvard College</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://cdn.glitch.com/bddbe95a-e8d0-4ea0-8afc-88c93c2ebd46%2Falb-admission.png">Bachelor of Liberal Arts (A.L.B.)</a>
+              </h4>
+              <p class="duration">
+                <span class="date" data-utc="2017-06-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2021-09-01T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Massachusetts</span>,
+                <span class="country" data-isocode="">United States</span>
+              </p>
+              <p class="summary">
+                Computer Science; GPA 3.9 (as of May 2018)
+                <br/>
+                Related studies in linear algebra, statistics and probability, and finance.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Stanford University</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://verify.lagunita.stanford.edu/SOA/c5ef398d5e164b00afa880709db10af5">MOOC</a>
+              </h4>
+              <p class="duration">
+                <span class="date" data-utc="2017-10-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2017-11-01T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">California</span>,
+                <span class="country" data-isocode="">United States</span>
+              </p>
+              <p class="summary">
+                Studies in enterprise-level web application deployment with focus on security, reliability, scalability, and cross-browser support.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Harvard University</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://cs50.harvard.edu/certificates/dd2b57d7-ac97-4c02-bc8d-0a98af1ab68f">MOOC</a>
+              </h4>
+              <p class="duration">
+                <span class="date" data-utc="2015-01-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2015-12-01T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Massachusetts</span>,
+                <span class="country" data-isocode="">United States</span>
+              </p>
+              <p class="summary">
+                Studies in computer science for real-world domains of biology, cryptography, finance, forensics, and gaming.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Universit&eacute; Catholique de Louvain</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://courses.edx.org/certificates/7b4124b616c0475eb451bc7348252c92">MOOC</a>
+              </h4>
+              <p class="duration">
+                <span class="date" data-utc="2015-01-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2015-11-01T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Charleroi</span>,
+                <span class="country" data-isocode="">Belgium</span>
+              </p>
+              <p class="summary">
+                Studies in major programming concepts, techniques, and paradigms in a unified framework.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">The University of British Columbia</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://courses.edx.org/certificates/e23bace355ab497f9388ac6d0562525e">MOOC</a>
+              </h4>
+              <p class="duration">
+                <span class="date" data-utc="2015-01-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2015-10-01T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Vancouver</span>,
+                <span class="country" data-isocode="">Canada</span>
+              </p>
+              <p class="summary">
+                Studies in computation as a tool for systematic problem solving in non-computer-science disciplines.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Lakeland Inter-American School</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://courses.edx.org/certificates/e23bace355ab497f9388ac6d0562525e">Pearson Edexcel AS Level</a>
+              </h4>
+              <p class="duration">
+                <span class="date" data-utc="2014-06-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2015-07-01T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Colombo</span>,
+                <span class="country" data-isocode="">Sri Lanka</span>
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Lakeland Inter-American School</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://cdn.glitch.com/bddbe95a-e8d0-4ea0-8afc-88c93c2ebd46%2Folevel.jpg">Pearson Edexcel Ordinary Level</a>
+              </h4>
+              <p class="duration">
+                <span class="date" data-utc="2011-03-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="2014-06-01T00:00:00Z">
+                </span>
+              </p>
+              <p class="location">
+                <span class="city">Colombo</span>,
+                <span class="country" data-isocode="">Sri Lanka</span>
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+          </div>
+          <div class="section">
+            <h2 class="title">projects</h2>
+            <div class="record">
+              <h3 class="title">Singlife's BaaS provider reverse-engeering</h3>
+              <h4 class="subtitle">
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Habitto Money GraphQL and REST backend</h3>
+              <h4 class="subtitle">
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Dealt Australia</h3>
+              <h4 class="subtitle">
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">CaterCare Australia</h3>
+              <h4 class="subtitle">
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+          </div>
+          <div class="section">
+            <h2 class="title">honors and awards</h2>
+            <div class="record">
+              <h3 class="title">HackerRank</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://www.hackerrank.com/ashenm">Gold Honours - Problem Solving</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+                Gold honours, five-star proficiency rating, in the domains of algorithms and data structures.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">HackerRank</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://www.hackerrank.com/ashenm">Gold Honours - Python</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+                Gold honours, five-star proficiency rating, in the domain of Python subsuming all language-supported paradigms.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">HackerRank</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://www.hackerrank.com/ashenm">Gold Honours - SQL</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+                Gold honours, five-star proficiency rating, in the domains of SQL subsuming all language-supported paradigms.
+              </p>
+            </div>
+          </div>
+          <div class="section">
+            <h2 class="title">licenses &amp; certifications</h2>
+            <div class="record">
+              <h3 class="title">Databricks</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://credentials.databricks.com/77950409-900f-4493-9445-80d27bc5182c">Platform Administrator</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Databricks</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://credentials.databricks.com/2cd5252e-a476-4e95-9c3f-9935eef05111">Azure Databricks Platform Architect</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">Databricks</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://credentials.databricks.com/65ec5b0a-b107-4f90-87fc-531590df2fff">AWS Databricks Platform Architect</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">OpenJS Foundation</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/0eadadbf-adc9-40f9-9090-e0f37868bbdd-ashen-madhawa-gunaratne-39a34574-3722-4693-90df-872ccaf90dbf-certificate.pdf">Node.js Application Developer</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">HashiCorp</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://www.credly.com/badges/e03e81aa-dc81-42db-8076-324f350d59e7">IaC Automation</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">HackerRank</h3>
+              <h4 class="subtitle">
+                <a class="transcript" href="https://www.hackerrank.com/certificates/81302342494c">Python</a>
+              </h4>
+              <p class="duration">
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+          </div>
+          <div class="section">
+            <h2 class="title">academic service</h2>
+            <div class="record">
+              <h3 class="title">freeCodeCamp</h3>
+              <h4 class="subtitle">Curriculum Contributor</h4>
+              <p class="duration">
+                <span class="date" data-utc="2017-02-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="">
+                </span>
+              </p>
+              <p class="summary">
+                Authore guides and specimen solutions for freeCodeCamp certification program challenges on algorithm design.
+              </p>
+            </div>
+            <div class="record">
+              <h3 class="title">edX</h3>
+              <h4 class="subtitle">Content Support Associate</h4>
+              <p class="duration">
+                <span class="date" data-utc="2016-12-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="">
+                </span>
+              </p>
+              <p class="summary">
+                Validate and alter qualitative attributes of uploaded course materials to meet edX guidelines.
+              </p>
+            </div>
+          </div>
+          <div class="section">
+            <h2 class="title">community service</h2>
+            <div class="record">
+              <h3 class="title">United Nations</h3>
+              <h4 class="subtitle">Volunteer Task Force</h4>
+              <p class="duration">
+                <span class="date" data-utc="2015-01-01T00:00:00Z">
+                </span>
+                -
+                <span class="date" data-utc="">
+                </span>
+              </p>
+              <p class="summary">
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>

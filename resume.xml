@@ -25,10 +25,28 @@
   <section>
     <title>experience</title>
     <record>
+      <title>Databricks</title>
+      <subtitle>Senior Consultant</subtitle>
+      <summary>Lead infrastructure administration, platform governance, and environment management. Responsible for maintaining secure, scalable, and reliable workspace foundations, supporting cloud infrastructure operations, and helping customers implement best practices across networking, access control, automation, and platform configuration.</summary>
+      <duration start="2025-06-01T00:00:00Z" end="" />
+      <location>
+        <city>Singapore</city>
+        <country isocode="SGP">Singapore</country>
+      </location>
+      <keywords>
+        <keyword>AWS</keyword>
+        <keyword>Azure</keyword>
+        <keyword>Data Warehouse</keyword>
+        <keyword>Lakehouse</keyword>
+        <keyword>Spark</keyword>
+        <keyword>Terraform</keyword>
+      </keywords>
+    </record>
+    <record>
       <title>Secure Agility</title>
       <subtitle>Lead DevOps Engineer</subtitle>
       <summary>Lead cross-SaaS integration architect; Design, author, and oversea custom integrations and workflows interconnecting multiple SaaS services.</summary>
-      <duration start="2023-08-01T00:00:00Z" end="" />
+      <duration start="2023-08-01T00:00:00Z" end="2025-09-30T00:00:00Z" />
       <location>
         <city>Sydney</city>
         <country isocode="AUS">Australia</country>

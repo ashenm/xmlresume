@@ -329,6 +329,22 @@
   <section>
     <title>projects</title>
     <record>
+      <title>GIC Analytics Workbench Platform</title>
+      <list>
+        <item>Led the implementation of Databricks on AWS and supporting workflows for GIC Private Limited - the investment fund manager of the Government of Singapore</item>
+        <item>Designed and developed YAML-based configuration-driven Terraform deployment workflows</item>
+        <item>Co-designed and developed data catalogs and connectors to to facilitate internal and external ETL workflows</item>
+        <item>Co-designed and developed security controls for the platform, including access management, secret handling, and environment isolation</item>
+      </list>
+    </record>
+    <record>
+      <title>Synapxe Healthcare Commercial Cloud</title>
+      <item>Implemented Databricks on AWS with full private connectivity via AWS PrivateLink to meet HCC platform and security requirements</item>
+      <item>Designed and authored Terraform modules and deployment workflows for provisioning Databricks workspaces and Unity Catalog resources</item>
+      <item>Co-designed the Unity Catalog, storage, and access control model to enforce environment separation, data segregation, and secure access governance</item>
+      <item>Defined reusable platform architecture patterns for identity federation, data sharing, and Databricks Asset Bundle-based CI/CD across non-production and production environments</item>
+    </record>
+    <record>
       <title>Singlife's BaaS provider reverse-engeering</title>
       <list>
         <item>Associate technical lead for Railsbank replacement with in-house BaaS service</item>

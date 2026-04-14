@@ -339,10 +339,12 @@
     </record>
     <record>
       <title>Synapxe Healthcare Commercial Cloud</title>
-      <item>Implemented Databricks on AWS with full private connectivity via AWS PrivateLink to meet HCC platform and security requirements</item>
-      <item>Designed and authored Terraform modules and deployment workflows for provisioning Databricks workspaces and Unity Catalog resources</item>
-      <item>Co-designed the Unity Catalog, storage, and access control model to enforce environment separation, data segregation, and secure access governance</item>
-      <item>Defined reusable platform architecture patterns for identity federation, data sharing, and Databricks Asset Bundle-based CI/CD across non-production and production environments</item>
+      <list>
+        <item>Implemented Databricks on AWS with full private connectivity via AWS PrivateLink to meet HCC platform and security requirements</item>
+        <item>Designed and authored Terraform modules and deployment workflows for provisioning Databricks workspaces and Unity Catalog resources</item>
+        <item>Co-designed the Unity Catalog, storage, and access control model to enforce environment separation, data segregation, and secure access governance</item>
+        <item>Defined reusable platform architecture patterns for identity federation, data sharing, and Databricks Asset Bundle-based CI/CD across non-production and production environments</item>
+      </list>
     </record>
     <record>
       <title>Singlife's BaaS provider reverse-engeering</title>
